@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <!-- diffcult -->
     <button id="demo" onclick="time()">change time</button>
     <script>
     function addZero(i) {
@@ -24,6 +25,19 @@
         var get = document.getElementById("demo").innerHTML = h + ":" + m + ":" + s;
         setInterval(time, 1000);
     }
+    </script>
+    <hr>
+    <!-- simly -->
+    <p id="p"></p>
+    <script>
+        var myVar = setInterval(function(){
+            setTimer()
+        },1000);
+
+        function setTimer(){
+            var d = new Date().toLocaleTimeString();
+            document.getElementById('p').innerHTML = d;
+        }
     </script>
 </body>
 
