@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="demo" onclick="time()">change time</button>
+    <script>
+    function addZero(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    };
+
+    function time() {
+        var d = new Date();
+        var h = addZero(d.getHours());
+        var m = addZero(d.getMinutes());
+        var s = addZero(d.getSeconds());
+        var get = document.getElementById("demo").innerHTML = h + ":" + m + ":" + s;
+        setInterval(time, 1000);
+    }
+    </script>
+</body>
+
+</html>
