@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .con {
+        width: 50px;
+        height: 50px;
+        margin: 200px auto;
+    }
+    
+    .con > div {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+    }
+    
+    .one {
+        background-color: #EA4335;
+        -webkit-animation: move_one 1s infinite linear;
+        -moz-animation: move_one 1s infinite linear;
+        -ms-animation: move_one 1s infinite linear;
+        animation: move_one 1s infinite linear;
+    }
+    
+    .two {
+        position: relative;
+        left: -10px;
+        top: 14px;
+        background-color: #FBBC05;
+        -webkit-animation: move_two 1s infinite linear;
+        -moz-animation: move_two 1s infinite linear;
+        -ms-animation: move_two 1s infinite linear;
+        animation: move_two 1s infinite linear;
+    }
+    
+    .three {
+        position: relative;
+        left: -14px;
+        top: -10px;
+        background-color: #34A853;
+        -webkit-animation: move_three 1s infinite linear;
+        -moz-animation: move_three 1s infinite linear;
+        -ms-animation: move_three 1s infinite linear;
+        animation: move_three 1s infinite linear;
+    }
+    
+    .four {
+        position: relative;
+        left: -24px;
+        top: 4px;
+        background-color: #4285F4;
+        -webkit-animation: move_four 1s infinite linear;
+        -moz-animation: move_four 1s infinite linear;
+        -ms-animation: move_four 1s infinite linear;
+        animation: move_four 1s infinite linear;
+    }
+    @-webkit-keyframes move_one {
+			50% { transform: translateY(-10px); }
+		}
+		@-moz-keyframes move_one {
+			50% { transform: translateY(-10px); }
+		}
+		@-ms-keyframes move_one {
+			50% { transform: translateY(-10px); }
+		}
+		@keyframes move_one {
+			50% { transform: translateY(-10px); }
+		}
+
+		@-webkit-keyframes move_two {
+			50% { transform: translateX(10px); }
+		}
+		@-moz-keyframes move_two {
+			50% { transform: translateX(10px); }
+		}
+		@-ms-keyframes move_two {
+			50% { transform: translateX(10px); }
+		}
+		@keyframes move_two {
+			50% { transform: translateX(10px); }
+		}
+
+		@-webkit-keyframes move_three {
+			50% { transform: translateX(-10px); }
+		}
+		@-moz-keyframes move_three {
+			50% { transform: translateX(-10px); }
+		}
+		@-ms-keyframes move_three {
+			50% { transform: translateX(-10px); }
+		}
+		@keyframes move_three {
+			50% { transform: translateX(-10px); }
+		}
+
+		@-webkit-keyframes move_four {
+			50% { transform: translateY(10px); }
+		}
+		@-moz-keyframes move_four {
+			50% { transform: translateY(10px); }
+		}
+		@-ms-keyframes move_four {
+			50% { transform: translateY(10px); }
+		}
+		@keyframes move_four {
+			50% { transform: translateY(10px); }
+		}
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+</body>
+
+</html>

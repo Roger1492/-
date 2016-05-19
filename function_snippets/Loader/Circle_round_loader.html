@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .top{
+    	width: 200px;
+    	height: 30px;
+    	margin: 20% auto;
+    }
+    .top > div {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+    .left{
+    	background-color: rgba(0, 0, 255, .6);
+    	animation: moveleft 1.5s infinite linear;
+    }
+    .right{
+    	background-color: rgba(111,111,111,.6);
+    	animation: moveright 1.5s infinite linear;
+    }
+    @keyframes moveleft {
+    	0%{
+    		transform: translate(0);
+    	}
+    	50% { 
+    		transform: translateX(40px); 
+    	}
+    	100%{
+    		transform: translateX(0);
+    	}
+    }
+    @keyframes moveright {
+    	0%{
+    		transform: translate(0);
+    	}
+    	50% { 
+    		transform: translateX(-40px);
+    	}
+    	100%{
+    		transform: translateX(0);
+    	}
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
