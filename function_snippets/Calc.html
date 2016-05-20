@@ -8,47 +8,64 @@ In the futurn, I will add the symbols "brackets()" to the code. -->
 	<title>Document</title>
 	<style>
 		.wrap{
-			width: 650px;
+			width: 340px;
 			border: 1px solid black;
 			box-sizing: content-box;
 			border-radius: 20px;
 		}
 		.screen{
-			width: 650px;
-			height: 100px;
-			line-height: 100px;
-			background-color: #e6e6e6;
+			width: 340px;
+			height: 70px;
+			line-height: 70px;
+			background-color: #DBD8D8;
 			border-radius: 20px 20px 0 0;
-			font-size: 2em;
+			font-size: 1.5em;
 			font-weight: bold;
 			text-align: center;
 			
 		}
+		.otherJinzhi{
+			margin-left: 10px;
+		}
+		.otherJinzhi p{
+			display: inline-block;
+		}
 		.numbers{
-			width: 100px;
-			height: 70px;
+			width: 50px;
+			height: 55px;
 			border-radius: 10%;
-			padding-top: 30px;
-			margin: 20px 10px;
+			padding-top: 15px;
+			margin: 10px 5px;
 			border: 2px solid black;
 			display: inline-block;
 			text-align: center;
-			font-size: 2em;
+			font-size: 1.5em;
 			cursor: pointer;
 		}
 		h1{
 			margin: 0;
 			height: 100px;
 		}
+		#NaN{
+			background-color: #E1E0E0;
+			color: grey;
+			cursor: default;
+		}
 	</style>
 </head>
 <body>
 	<div class="wrap">
 		<div class="screen" id="screen"></div>
+		<div class="otherJinzhi">
+			HEX <strong id="hex">hex</strong> <br>
+			DEC <strong id="dec">dec</strong> <br>
+			OCT <strong id="oct">oct</strong> <br>
+			BIN <strong id="bin">bin</strong> <br>
+		</div>
 
-		<div class="numbers" id="period">CE</div>
+		<div class="numbers" id="NaN">CE</div>
 		<div class="numbers" id="clear">C</div>
-		<div class="numbers" id="clear"><=</div>
+		<div class="numbers" id="NaN"><=</div>
 		<div class="numbers" id="divide">/</div>
 		<div class="numbers" id="parenthesesL">(</div>
 
@@ -62,17 +79,17 @@ In the futurn, I will add the symbols "brackets()" to the code. -->
 		<div class="numbers" id="five">5</div>
 		<div class="numbers" id="six">6</div>
 		<div class="numbers" id="subtract">-</div>
-		<div class="numbers" id="subtract">{</div>
+		<div class="numbers" id="NaN">NaN</div>
 
 		<div class="numbers" id="one">1</div>
 		<div class="numbers" id="two">2</div>
 		<div class="numbers" id="three">3</div>
 		<div class="numbers" id="add">+</div>
-		<div class="numbers" id="add">}</div>
+		<div class="numbers" id="NaN">NaN</div>
 
 		<div class="numbers" id="zero">0</div>
 		<div class="numbers" id="period">.</div>
-		<div class="numbers" id="period">x</div>
+		<div class="numbers" id="NaN">NaN</div>
 		<div class="numbers" id="equal">=</div>
 
 	</div>
@@ -131,6 +148,24 @@ In the futurn, I will add the symbols "brackets()" to the code. -->
 				var i = document.createTextNode(e.innerHTML);
 				screen.appendChild(i);
 			});
+		});
+
+		hex.addEventListener('click', function(){
+			var hexx = document.getElementById('hex');
+			hexx.innerHTML = screen.innerHTML; 
+			console.log(hexx.innerHTML);                  		// to hex not finished
+		});
+		dec.addEventListener('click', function(){
+			var decc = document.getElementById('dec');
+			decc.innerHTML = screen.innerHTML;                    			// to dec not finished
+		})
+		oct.addEventListener('click', function(){
+			var octt = document.getElementById('oct');
+			octt.innerHTML = screen.innerHTML;
+		});
+		bin.addEventListener('click', function(){
+			var binn = document.getElementById('bin');
+			binn.innerHTML = screen.innerHTML.toString(2);                     //to bin not finished
 		});
 	</script>
 </body>
