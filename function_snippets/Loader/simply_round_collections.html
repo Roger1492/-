@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.loader{
+			width: 200px;
+			height: 200px;
+			margin: 50px auto;
+		}
+		.loader > i{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin: 0 10px;
+			border-top: 5px solid rgba(0,0,0,.1);
+			border-right: 5px solid rgba(0,0,0,.1);
+			border-bottom: 5px solid rgba(0,0,0,.1);
+			border-left: 5px solid rgba(0,0,0,.5);
+		}
+		.clockwise{
+			border-radius: 50%;
+			-webkit-animation: round_clockwise 1s infinite linear;
+			   -moz-animation: round_clockwise 1s infinite linear;
+				-ms-animation: round_clockwise 1s infinite linear;
+				    animation: round_clockwise 1s infinite linear;
+		}
+		.anticlockwise{
+			border-radius: 50%;
+			-webkit-animation: round_anticlockwise 1s infinite linear;
+			   -moz-animation: round_anticlockwise 1s infinite linear;
+				-ms-animation: round_anticlockwise 1s infinite linear;
+				    animation: round_anticlockwise 1s infinite linear;
+		}
+		.rect{
+			-webkit-animation: rect 1s infinite linear;
+			   -moz-animation: rect 1s infinite linear;
+				-ms-animation: rect 1s infinite linear;
+				    animation: rect 1s infinite linear;
+		}
+		@-webkit-keyframes round_clockwise {
+			100% { transform: rotate(360deg); }
+		}
+		@-webkit-keyframes round_anticlockwise {
+			0% { transform: rotate(360deg); }
+		}
+
+		@-webkit-keyframes rect {
+			0% { transform: rotate(360deg); }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="loader">
+		<i class="clockwise"></i>
+		<i class="anticlockwise"></i>
+		<i class="rect"></i>
+	</div>
+</body>
+</html>
