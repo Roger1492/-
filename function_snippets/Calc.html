@@ -7,6 +7,9 @@ In the futurn, I will add the symbols "brackets()" to the code. -->
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+		html,body{
+			font-family: Arial, "Microsoft YaHei";
+		}
 		.wrap{
 			width: 340px;
 			border: 1px solid black;
@@ -22,24 +25,25 @@ In the futurn, I will add the symbols "brackets()" to the code. -->
 			font-size: 1.5em;
 			font-weight: bold;
 			text-align: center;
-			
 		}
 		.otherJinzhi{
 			margin-left: 10px;
 		}
-		.otherJinzhi p{
+		.otherJinzhi strong{
 			display: inline-block;
+			margin-top: 5px;
+			font-size: 1.2em;
 		}
 		.numbers{
 			width: 50px;
 			height: 55px;
+			line-height: 55px;
 			border-radius: 10%;
-			padding-top: 15px;
-			margin: 10px 5px;
+			margin: 5px;
 			border: 2px solid black;
 			display: inline-block;
 			text-align: center;
-			font-size: 1.5em;
+			font-size: 1.4em;
 			cursor: pointer;
 		}
 		h1{
@@ -150,18 +154,19 @@ In the futurn, I will add the symbols "brackets()" to the code. -->
 			});
 		});
 
-		hex.addEventListener('click', function(){
-			var hexx = document.getElementById('hex').innerHTML = screen.innerHTML; // to hex not finished
-		});
-		dec.addEventListener('click', function(){
-			var decc = document.getElementById('dec').innerHTML = screen.innerHTML; // to dec not finished
-		})
-		oct.addEventListener('click', function(){
-			var octt = document.getElementById('oct').innerHTML = screen.innerHTML;
-		});
-		bin.addEventListener('click', function(){
-			var binn = document.getElementById('bin').innerHTML = screen.innerHTML; //to bin not finished
-		});
+		// hex.addEventListener('click', function(){
+		// 	var hexx = document.getElementById('hex').innerHTML = screen.innerHTML; // to hex not finished
+		// 	hexx.toString(16);
+		// });
+		// dec.addEventListener('click', function(){
+		// 	var decc = document.getElementById('dec').innerHTML = screen.innerHTML; // to dec not finished
+		// })
+		// oct.addEventListener('click', function(){
+		// 	var octt = document.getElementById('oct').innerHTML = screen.innerHTML;
+		// });
+		// bin.addEventListener('click', function(){
+		// 	var binn = document.getElementById('bin').innerHTML = screen.innerHTML; //to bin not finished
+		// });
 	</script>
 </body>
 </html>
