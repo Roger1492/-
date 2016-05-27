@@ -1,0 +1,171 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+}
+#shape div{
+	background-color: #229FFD;
+	width: 100vw;
+	height: 20vh;
+}
+#shape .one{
+	margin: 50px;
+	display: inline-block;
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	background-color: #7B72E9;
+	border: none;
+	outline: none;
+	color: white;
+	border-radius: 10px;
+	transition: background-color .3s ease-out;
+}
+#shape .one:hover{
+	cursor: pointer;
+	background-color: #918AEA;
+}
+#shape .one:active{
+	box-shadow: 3px 3px 10px #7B72E9,-3px -3px 10px #7B72E9;
+}
+
+#shape .two{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+#shape .two:hover{
+	cursor: pointer;
+	color: #229FFD;
+	background-color: #fff;
+}
+#shape .three{
+	display: inline-block;
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #E5E4E4;
+	color: #000;
+	font-size: 2em;
+	border-radius: 20px;
+	border-bottom: 10px solid #999999;
+	transition: all .2s ease-out;
+}
+#shape .three:hover{
+	cursor: pointer;
+	background-color: #F8F6F6;
+}
+#shape .three:active{
+	height: 76px;
+	color: #8A8989;
+	transform: translateY(6px);
+	border-bottom: 4px solid #999999;
+	background-color: #DEDCDC;
+}
+#shape .four{
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #93C335;
+	border-radius: 29px;
+	color: #fff;
+	font-size: 2em;
+	border-bottom: 8px solid #749A27;
+	transition: all .1s cubic-bezier(0.21, 0.56, 0.63, 0.7);
+}
+#shape .four:hover{
+	cursor: pointer;
+	background-color: #A1C25F;
+}
+#shape .four:active{
+	height: 54px;
+	transform: translateY(3px);
+	background-color: #8CC125;
+	color: gray;
+	border-bottom: 4px solid #6E961E;
+}
+#shape .five{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	background: -webkit-linear-gradient(top,#ff5c69, #ff2939);
+	color: #fff;
+	font-size: 1.5em;
+	border: 1px solid red;
+	text-align: center;
+}
+#shape .five:hover{
+	cursor: pointer;
+}
+#shape .five:active{
+	color: #A93838;
+	background: -webkit-linear-gradient(top,#ff2939,#DF3846, #ff2939);
+}
+#shape .six{
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	line-height: 70px;
+	text-align: center;
+	color: #fff;
+	font-size:1.5em;
+	background-color: #E6A42C;
+	border-radius: 5px;
+	border: 1px solid #E6A42C;
+}
+#shape .six:hover{
+	cursor: pointer;
+	background-color: #EEB346;
+}
+
+span{
+	display: inline-block;
+	width: 180px;
+	height: 70px;
+	border-radius: 35px;
+	background: -webkit-linear-gradient(top,#E7E5E5,#F2F2F2);
+	border: 1px solid #CFCECE;
+}
+span > a{
+	position: relative;
+	left: 15px;
+	top: 15px;
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 2em;
+	background: -webkit-linear-gradient(top,#2485CD,#1078C5);
+	border-radius: 25px;
+	border: 1px solid #1078C5;
+	color: #E1E0E0;
+	font-size: 1.1em;
+	text-decoration: none;
+	text-align: center;
+}
+span > a:hover{
+	cursor: pointer;
+	background: -webkit-linear-gradient(top,#1A80CC,#0D6CB2);
+}
+span > a:active{
+	color: #9B9B9B;
+	box-shadow: inset 0 2px 3px #115B91;
+	background: -webkit-linear-gradient(top,#3289CA,#2074B2);
+}
