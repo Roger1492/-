@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul > li {
+    	height: 50px;
+    	width: 100px;
+    	line-height: 50px;
+        float: left;
+        list-style: none;
+        background: -webkit-linear-gradient(top,#2D76E3,#035CDF);
+        transform: skew(10deg);
+    }
+    
+    ul > li > a {
+    	display: inline-block;
+    	height: 50px;
+    	width: 100px;
+    	line-height: 50px;
+        text-decoration: none;
+        text-align: center;
+        color: #bbb;
+        font-size: 1.3em;
+    }
+    .con > li:hover{
+    	background-color: #bbb;
+    }
+    .con > li:hover > a{
+    	color: #000;
+    }
+    .dir{
+    	position: relative;
+    	right: 40px;
+    	top: -2px;
+    	display: none;
+    }
+    .dir > li:hover{
+    	background-color: #bbb;
+    }
+    .dir > li:hover > a{
+    	color: #000;
+    }
+
+    .active:hover .dir{
+		display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <ul class="con">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">News</a>
+			<ul class="dir">
+				<li><a href="#">China</a></li>
+				<li><a href="#">American</a></li>
+				<li><a href="#">Japan</a></li>
+				<li><a href="#">British</a></li>
+				<li><a href="#">Germany</a></li>
+			</ul>
+        </li>
+        <li class="active"><a href="#">Tech</a>
+			<ul class="dir">
+				<li><a href="#">Apple</a></li>
+				<li><a href="#">Google</a></li>
+				<li><a href="#">Microsoft</a></li>
+				<li><a href="#">Facebook</a></li>
+			</ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</body>
+
+</html>
