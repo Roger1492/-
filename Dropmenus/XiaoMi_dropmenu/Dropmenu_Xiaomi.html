@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container > li {
+        padding: 20px;
+        width: 200px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        list-style: none;
+    }
+
+    .container > li > a {
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .container > li:hover {
+        background-color: #ff6700;
+    }
+    .dir{
+    	display: none;
+    	position: relative;
+    	left: 220px;
+    	top: -39px;
+    	width: 500px;
+    	box-shadow: 1px 1px 5px rgba(#605395, 0.47);
+    }
+    .dir li{
+    	list-style: none;
+    	width: 500px;
+    	height: 100px;
+    }
+    .dir > li > .t_img > img{
+    	position: relative;
+    	top: 10px;
+    }
+    .dir > li > .t_info{
+    	position: relative;
+    	top: -4px;
+    	color: #000;
+    	margin: 0 15px;
+    	text-decoration: none;
+    	transition: all .2s;
+    }
+    .dir > li .t_info:hover{
+    	color: #ff6700;
+    }
+    .dir > li > .t_xg{
+    	position: relative;
+    	top: -5px;
+    	display: inline-block;
+    	width: 50px;
+    	height: 25px;
+    	line-height: 25px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 0 20px;
+    	color: #ff6700;
+    	border: 1px solid #ff6700;
+    	transition: all .3s ease-in-out;
+    }
+    .dir > li > .t_xg:hover{
+    	background-color: #ff6700;
+    	color: #fff;
+    }
+    .active:hover .dir{
+    	display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+        <li class="active"><a href="#">手机 平板 电话卡</a>
+            <ul class="dir">
+                <li>
+                    <a class="t_img" href="#"><img src="hongmi3.jpg"></a>
+                    <a class="t_info" href="#">小米手机5</a>
+                    <a class="t_xg" href="#">选购</a>
+                    <a class="t_img" href="#"><img src="maxbar80.jpg"></a>
+                    <a class="t_info" href="#">红米手机3</a>
+                    <a class="t_xg" href="#">选购</a>
+                </li>
+                <li>
+                    <a class="t_img" href="#"><img src="mi4.jpg"></a>
+                    <a class="t_info" href="#">小米手机5</a>
+                    <a class="t_xg" href="#">选购</a>
+                    <a class="t_img" href="#"><img src="mi5bar80.jpg"></a>
+                    <a class="t_info" href="#">红米手机3</a>
+                    <a class="t_xg" href="#">选购</a>
+                </li>
+                <li>
+                    <a class="t_img" href="#"><img src="minote - Copy.jpg"></a>
+                    <a class="t_info" href="#">小米手机5</a>
+                    <a class="t_xg" href="#">选购</a>
+                    <a class="t_img" href="#"><img src="minote.jpg"></a>
+                    <a class="t_info" href="#">红米手机3</a>
+                    <a class="t_xg" href="#">选购</a>
+                </li>
+                <li>
+                    <a class="t_img" href="#"><img src="note3 - Copy.jpg"></a>
+                    <a class="t_info" href="#">小米手机5</a>
+                    <a class="t_xg" href="#">选购</a>
+                    <a class="t_img" href="#"><img src="note3.jpg"></a>
+                    <a class="t_info" href="#">红米手机3</a>
+                    <a class="t_xg" href="#">选购</a>
+                </li>
+                <li>
+                    <a class="t_img" href="#"><img src="pad2 - Copy.png"></a>
+                    <a class="t_info" href="#">小米手机5</a>
+                    <a class="t_xg" href="#">选购</a>
+                    <a class="t_img" href="#"><img src="pad2.png"></a>
+                    <a class="t_info" href="#">红米手机3</a>
+                    <a class="t_xg" href="#">选购</a>
+                </li>
+                <li>
+                    <a class="t_img" href="#"><img src="telcom.jpg"></a>
+                    <a class="t_info" href="#">小米手机5</a>
+                    <a class="t_xg" href="#">选购</a>
+                    <a class="t_img" href="#"><img src="maxbar80.jpg"></a>
+                    <a class="t_info" href="#">红米手机3</a>
+                    <a class="t_xg" href="#">选购</a>
+                </li>
+            </ul>
+        </li>
+        <li class="active"><a href="#">电视 盒子</a>
+          <ul class="dir dir2">
+              <li>
+                  <a class="t_img" href="#"><img src="hongmi3.jpg"></a>
+                  <a class="t_info" href="#">小米手机5</a>
+                  <a class="t_xg" href="#">选购</a>
+                  <a class="t_img" href="#"><img src="maxbar80.jpg"></a>
+                  <a class="t_info" href="#">红米手机3</a>
+                  <a class="t_xg" href="#">选购</a>
+              </li>
+              <li>
+                  <a class="t_img" href="#"><img src="mi4.jpg"></a>
+                  <a class="t_info" href="#">小米手机5</a>
+                  <a class="t_xg" href="#">选购</a>
+                  <a class="t_img" href="#"><img src="mi5bar80.jpg"></a>
+                  <a class="t_info" href="#">红米手机3</a>
+                  <a class="t_xg" href="#">选购</a>
+              </li>
+              <li>
+                  <a class="t_img" href="#"><img src="minote - Copy.jpg"></a>
+                  <a class="t_info" href="#">小米手机5</a>
+                  <a class="t_xg" href="#">选购</a>
+                  <a class="t_img" href="#"><img src="minote.jpg"></a>
+                  <a class="t_info" href="#">红米手机3</a>
+                  <a class="t_xg" href="#">选购</a>
+              </li>
+              <li>
+                  <a class="t_img" href="#"><img src="note3 - Copy.jpg"></a>
+                  <a class="t_info" href="#">小米手机5</a>
+                  <a class="t_xg" href="#">选购</a>
+                  <a class="t_img" href="#"><img src="note3.jpg"></a>
+                  <a class="t_info" href="#">红米手机3</a>
+                  <a class="t_xg" href="#">选购</a>
+              </li>
+              <li>
+                  <a class="t_img" href="#"><img src="pad2 - Copy.png"></a>
+                  <a class="t_info" href="#">小米手机5</a>
+                  <a class="t_xg" href="#">选购</a>
+                  <a class="t_img" href="#"><img src="pad2.png"></a>
+                  <a class="t_info" href="#">红米手机3</a>
+                  <a class="t_xg" href="#">选购</a>
+              </li>
+              <li>
+                  <a class="t_img" href="#"><img src="telcom.jpg"></a>
+                  <a class="t_info" href="#">小米手机5</a>
+                  <a class="t_xg" href="#">选购</a>
+                  <a class="t_img" href="#"><img src="maxbar80.jpg"></a>
+                  <a class="t_info" href="#">红米手机3</a>
+                  <a class="t_xg" href="#">选购</a>
+              </li>
+          </ul>
+        </li>
+        <li><a href="#">路由器 智能硬件</a></li>
+        <li><a href="#">移动电源 插线板</a></li>
+        <li><a href="#">耳机 音响</a></li>
+        <li><a href="#">电池 存储卡</a></li>
+        <li><a href="#">保护套 后盖</a></li>
+        <li><a href="#">贴膜 其他配件</a></li>
+        <li><a href="#">米兔 服装</a></li>
+        <li><a href="#">箱包 其他周边</a></li>
+    </ul>
+</body>
+
+</html>
