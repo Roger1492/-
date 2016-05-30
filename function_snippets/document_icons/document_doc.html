@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    div {
+        position: relative;
+        width: 160px;
+        height: 200px;
+        background-color: #4040B0;
+        margin: 50px auto;
+    }
+    div::before{
+    	content: "";
+    	border-right: 30px solid white;
+    	border-bottom: 30px solid gray;
+    	position: absolute;
+    	right: 0;
+    }
+    .icon{
+    	position: absolute;
+    	left: 50px;
+    	top: 30px;
+    	color: #fff;
+    	font-size: 3em;
+    	font-family: "Microsoft YaHei";
+    }
+    .type{
+    	position: absolute;
+    	left: 40px;
+    	top: 100px;
+    	color: #fff;
+    	font-size: 2em;
+    	font-family: "Microsoft YaHei";
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+    	<span class="icon">三</span>
+    	<span class="type">DOC</span>
+    </div>
+</body>
+
+</html>
