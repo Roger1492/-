@@ -33,6 +33,7 @@
             left: 13px;
             top: 13px;
             color: #fff;
+            transition: all .5s;
         }
         #demo a:hover{
             background-color: #B6B4B4;
@@ -63,6 +64,9 @@
         }
         .weibo:hover img{
             transform: scale(1,1);
+        }
+        .backTop:hover i{
+            transform: translateY(-15px);
         }
     </style>
 </head>
@@ -103,7 +107,9 @@
             <i class="fa fa-weibo fa-2x"></i>
             <img src="imgs/qrcode_128px.png">
         </a>
-        <a class="backTop" href="#"><i class="fa fa-arrow-up fa-2x"></i></a>
+        <a class="backTop" href="#">
+            <i class="fa fa-arrow-up fa-2x"></i>
+        </a>
     </aside>
 </body>
 </html>
