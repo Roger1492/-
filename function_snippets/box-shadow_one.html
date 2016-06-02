@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 800px;
+            height: 300px;
+            border: 5px solid rgba(0, 0, 0, .3);
+            border-radius: 10px;
+            margin: 50px auto;
+            z-index: 9999;
+        }
+        div::after{
+            position: relative;
+            left: 100px;
+            top: 300px;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 5px;
+            color: rgba(0, 0, 0, .3);
+            box-shadow: 10px 4px 20px rgba(0, 0, 0, .3), -10px 10px 20px rgba(0,0,0,.3);
+            z-index: -99;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
