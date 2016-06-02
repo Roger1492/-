@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+    <!-- <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="D:\CDN\Font-Awesome-master\Font-Awesome-master\css\font-awesome.min.css">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        #test{
+            width: 10px;
+        }
+        #demo{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+        }
+        #demo a{
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: #D4D2D2;
+            margin-top: 1px;
+            transition: all .5s;
+        }
+        #demo a i{
+            position: relative;
+            left: 13px;
+            top: 13px;
+            color: #fff;
+        }
+        #demo a:hover{
+            background-color: #B6B4B4;
+        }
+        .wechat img{
+            position: relative;
+            right: 158px;
+            bottom: 140px;
+            background-color: #eee;
+            padding: 20px 15px;
+            transform: scale(0,0);
+            transition: all .6s;
+            transform-origin: 158px 165px;
+        }
+        .wechat:hover img{
+            transform: scale(1,1);
+        }
+
+        .weibo img{
+            position: relative;
+            right: 158px;
+            bottom: 140px;
+            background-color: #eee;
+            padding: 20px 15px;
+            transform: scale(0,0);
+            transition: all .6s;
+            transform-origin: 158px 165px;
+        }
+        .weibo:hover img{
+            transform: scale(1,1);
+        }
+    </style>
+</head>
+<body>
+<div id="test">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+    <aside id="demo">
+        <a class="wechat" href="#">
+            <i class="fa fa-wechat fa-2x"></i>
+            <img src="imgs/qrcode_128px.png">
+        </a>
+        <a class="weibo" href="#">
+            <i class="fa fa-weibo fa-2x"></i>
+            <img src="imgs/qrcode_128px.png">
+        </a>
+        <a class="backTop" href="#"><i class="fa fa-arrow-up fa-2x"></i></a>
+    </aside>
+</body>
+</html>
