@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/4.1.1/normalize.min.css">
+    <style>
+    .wrap {
+        width: 600px;
+        height: 200px;
+        border: 1px solid silver;
+        margin: 100px;
+    }
+    
+    .c_li ul {
+        width: 600px;
+        height: 50px;
+        background-color: silver;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .c_li ul li {
+        float: left;
+        list-style-type: none;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 120px;
+    }
+    
+    .c_li ul li:hover {
+        background-color: whitesmoke;
+    }
+    
+    .c_li ul li:hover a {
+        color: #333;
+    }
+    
+    .c_li ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2em;
+    }
+    .content{
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="c_li">
+            <ul>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Washinton</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">Tokyo</a></li>
+                <li><a href="#">London</a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            <div class="paris content">
+                <p>Paris</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>consectetur adipisicing elit. Iste, incidunt.</p>
+            </div>
+            <div class="Washinton content">
+                <p>Washinton</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>consectetur adipisicing elit. Iste, incidunt.</p>
+            </div>
+            <div class="NewYor content">
+                <p>NewYork</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p> adipisicing elit. Iste, consectetur incidunt.</p>
+            </div>
+            <div class="Tokyo content">
+                <p>Tokyo</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>consectetur elit. Iste, incidunt. adipisicing</p>
+            </div>
+            <div class="London content">
+                <p>London</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>consectetur adipisicing elit. Iste, incidunt.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    var titles = document.getElementsByTagName("li");
+    var contents = document.getElementsByClassName("content");
+
+    for (var i = 0; i < titles.length; i++) {
+            titles[i].id = i;
+            titles[i].onmouseover = function (){
+                for(var j = 0; j<titles.length;j++){
+                    contents[j].style.display = "";
+                }
+                contents[this.id].style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
