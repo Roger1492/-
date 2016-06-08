@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 20px;
+            float: left;
+        }
+        .loading1{
+            width: 100px;
+            height: 100px;
+            border: 20px solid #f3f3f3;
+            border-top: 20px solid #3498db;
+            border-radius: 50%;
+            animation: loading 2s infinite linear;
+        }
+        .loading2{
+            width: 100px;
+            height: 100px;
+            border-top: 20px solid blue;
+            border-left: 20px solid red;
+            border-right: 20px solid green;
+            border-bottom: 20px solid yellowgreen;
+            border-radius: 50%;
+            animation: loading 2s infinite linear;
+        }
+        .loading3{
+            width: 100px;
+            height: 100px;
+            border-top: 15px solid #BFBCBC;
+            border-left: 15px solid #BFBCBC;
+            border-right: 15px solid #BFBCBC;
+            border-bottom: 15px solid blue;
+            border-radius: 50%;
+
+            animation: loading3 2s infinite ease-in-out;
+        }
+        @-webkit-keyframes loading {
+            0% {  }
+            100% { transform: rotate(360deg); }
+        }
+        @-webkit-keyframes loading3 {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading1"></div>
+    <div class="loading2"></div>
+    <div class="loading3"></div>
+</body>
+</html>
