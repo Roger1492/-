@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+    body {
+        background-color: lightgreen;
+    }
+    
+    div {
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+        margin: 50px auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2), 0 5px 5px rgba(0, 0, 0, .24);
+    }
+    
+    #d {
+        width: 220px;
+        height: 30px;
+        margin-left: 40px;
+        border: none;
+        outline: none;
+        background-color: whitesmoke;
+        text-indent: 5px;
+    }
+    
+    input[type="text"] {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    input[type="submit"] {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 75px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        outline: none;
+    }
+    
+    p {
+        color: gray;
+        font-family: Arial;
+        text-align: center;
+    }
+    
+    p > a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="post">
+            <input type="text" name="t" id="d" placeholder="Usrenme" required>
+            <input type="password" name="p" id="d" placeholder="Password" required>
+            <br>
+            <input type="submit" value="LOGIN">
+            <p>Not registered? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
