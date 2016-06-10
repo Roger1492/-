@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        ul li{
+            cursor: pointer;
+        }
+        .month{
+            width: 700px;
+            margin: 100px auto;
+        }
+        .choose{
+            padding: 0;
+            margin: 0;
+            width: 700px;
+            height: 150px;
+            background-color: limegreen;
+        }
+        .choose li{
+            position: relative;
+            top: 50px;
+            padding: 0 30px;
+            list-style: none;
+            font-size: 2em;
+            color: #fff;
+        }
+        .prve{
+            float: left;
+        }
+        .next{
+            float: right;
+        }
+        .mont-m{
+            text-align: center;
+        }
+
+        .week{
+            width: 700px;
+            height: 50px;
+            background-color: silver;
+        }
+        .week ul{
+            padding: 0;
+            margin: 0;
+        }
+        .week ul li{
+            float: left;
+            width: 100px;
+            list-style-type: none;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .days{
+            width: 700px;
+            height: 250px;
+            background-color: whitesmoke;
+        }
+        .days ul{
+            padding: 0;
+            margin: 0;
+        }
+        .days ul li{
+            width: 100px;
+            float: left;
+            list-style-type: none;
+            text-align: center;
+            font-size: 1.2em;
+            padding-top: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="month">
+        <ul class="choose">
+            <li class="prve">❮</li>
+            <li class="next">❯</li>
+            <li class="mont-m">
+                <span>June</span>
+                <br>
+                <span>10 Friday</span>
+            </li>
+        </ul>
+        <div class="week">
+            <ul>
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thur</li>
+                <li>Fri</li>
+                <li>Sta</li>
+            </ul>
+        </div>
+        <div class="days">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+            <ul>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+            </ul>
+            <ul>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+            </ul>
+            <ul>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+            </ul>
+            <ul>
+                <li>29</li>
+                <li>30</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
