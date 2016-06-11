@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+        }
+        .container{
+            width: 350px;
+            height: 350px;
+            margin: 100px auto;
+        }
+        .wrap{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-top: 3px solid blue;
+            border-left: 3px solid transparent;
+            border-bottom: 3px solid blue;
+            border-right: 3px solid transparent;
+            border-radius: 50%;
+            animation: round 2s infinite linear;
+        }
+        .dot{
+            position: absolute;
+            top: 37%;
+            left: 37%;
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            border-radius: 50%;
+            animation: slash 1s infinite ease-in-out;
+        }
+
+        @keyframes round {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes slash {
+            50% { transform: scale(.2, .2) }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

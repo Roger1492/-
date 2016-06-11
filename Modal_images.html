@@ -40,27 +40,36 @@
             display: block;
             margin: 100px auto;
             width: 1000px;
+            animation: zoom .6s;
+        }
+        @-webkit-keyframes zoom {
+            0% { transform: scale(0, 0); }
+            100% { transform: scale(1, 1); }
+        }
+        @keyframes zoom {
+            0% { transform: scale(0, 0); }
+            100% { transform: scale(1, 1); }
         }
     </style>
 </head>
 <body>
     <div id="wrap" class="wrap">
         <p>click this image to show Modal images</p>
-        <img id="wrap-image" src="F:\Wallpaper\1113154.jpg">
+        <img src="F:\Wallpaper\1113154.jpg">
     </div>
     <div id="popup" class="popup">
         <span id="close" onclick="this.parentElement.style.display='none'">&times;</span>
-        <img popup-image src="F:\Wallpaper\1113154.jpg">
+        <img src="F:\Wallpaper\1113154.jpg">
     </div>
 
     <script>
         var wrap =document.getElementById("wrap");
         var popup = document.getElementById("popup");
+        var close = document.getElementById("close");
 
         wrap.onclick = function(){
             popup.style.display = "block";
         }
-
     </script>
 </body>
 </html>
