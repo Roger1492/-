@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .wrap{
+        width: 500px;
+    }
+        .wrap > img{
+            width: 500px;
+            cursor: pointer;
+            transition: all .1s;
+        }
+        .wrap > img:hover{
+            box-shadow: 0 0 5px #333, 0 5px 10px #333;
+        }
+
+        .popup{
+            position: fixed;
+            display: none;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        .popup span{
+            position: relative;
+            left: 96%;
+            font-size: 5em;
+            color: #fff;
+            cursor: pointer;
+        }
+        .popup > img{
+            display: block;
+            margin: 100px auto;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <p>click this image to show Modal images</p>
+        <img id="wrap-image" src="F:\Wallpaper\1113154.jpg">
+    </div>
+    <div id="popup" class="popup">
+        <span id="close" onclick="this.parentElement.style.display='none'">&times;</span>
+        <img popup-image src="F:\Wallpaper\1113154.jpg">
+    </div>
+
+    <script>
+        var wrap =document.getElementById("wrap");
+        var popup = document.getElementById("popup");
+
+        wrap.onclick = function(){
+            popup.style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
