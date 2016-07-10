@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            position: absolute;
+            top: 0;
+            width: 300px;
+            height: 300px;
+            background:-webkit-radial-gradient(#A60185,#E785F6);
+            border-radius: 50%;
+            transform: scale(.1,.1);
+            animation: run 2s infinite linear;
+        }
+        .two{
+            position: absolute;
+            top: 0;
+            background:-webkit-radial-gradient(red,blue);
+            animation: run 1s .6s infinite ease;
+        }
+        .three{
+            position: absolute;
+            top: 0;
+            background: -webkit-radial-gradient(green,yellow);
+            animation: run 1s .1.4s infinite ease;
+        }
+        @-webkit-keyframes run {
+            50% { opacity: .5; }
+            60% { opacity: .4; }
+            70% { opacity: .3; }
+            80% { opacity: .2; }
+            90% { opacity: .1; }
+            100% { transform: scale(1,1); opacity:0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+    <div class="wrap two"></div>
+    <div class="wrap three"></div>
+</body>
+</html>
