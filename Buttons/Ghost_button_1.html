@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost button</title>
+    <style>
+        body{
+            background-color: #13BEC4;
+        }
+        div{
+            position: relative;
+            display: inline-block;
+            margin: 200px 200px;
+            width: 200px;
+            height: 60px;
+            outline: none;
+            border: 4px solid #eee;
+            color: #eee;
+            cursor: pointer;
+            font-size: 1.4em;
+            line-height: 60px;
+            text-align: center;
+            transition: all .2s ease-in;
+        }
+        #btn1:hover{
+            background-color: #eee;
+            color: #000;
+        }
+        span{
+            display: inline-block;
+            position: absolute;
+            background-color: #eee;
+            opacity: 0;
+        }
+        .top, .bottom{
+            width: 200px;
+            height: 5px;
+        }
+        .right, .left{
+            width: 5px;
+            height: 60px;
+        }
+        .top{
+            top: -5px;
+            left: -300px;
+        }
+        .bottom{
+            bottom: -5px;
+            left: 300px;
+        }
+        .left{
+            left: -4px;
+            bottom: -150px;
+        }
+        .right{
+            right: -4px;
+            top: -150px;
+        }
+        #btn2:hover .top{
+            animation: toTop 0.8s;
+        }
+        #btn2:hover .bottom{
+            animation: toBottom 0.8s;
+        }
+        #btn2:hover .left{
+            animation: toLeft 0.8s;
+        }
+        #btn2:hover .right{
+            animation: toRight 0.8s;
+        }
+        @-webkit-keyframes toTop {
+            0% { left: -300px; opacity: 0; }
+            1% {opacity: 1;}
+            50% { left: 10px; }
+            90% {opacity: 0;}
+            100% { left: -300px; }
+        }
+        @-webkit-keyframes toBottom{
+            0% { left: 300px; opacity: 0;}
+            1% {opacity: 1;}
+            50% { left: 10px; }
+            90% {opacity: 0;}
+            100% {left: 300px;}
+        }
+        @-webkit-keyframes toLeft{
+            0% { bottom: -150px; opacity: 0;}
+            1% {opacity: 1;}
+            50% { bottom: 10px; }
+            90% {opacity: 0;}
+            100% {bottom: -150px;}
+        }
+        @-webkit-keyframes toRight{
+            0% { top: -150px; opacity: 0;}
+            1% {opacity: 1;}
+            50% { top: 1px; }
+            90% {opacity: 0;}
+            100% {top: -150px;}
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="btn1">button</div> -->
+    <div id="btn2">button
+        <span class="top"></span>
+        <span class="bottom"></span>
+        <span class="left"></span>
+        <span class="right"></span>
+    </div>
+
+</body>
+</html>
