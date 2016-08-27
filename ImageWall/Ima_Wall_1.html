@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <style>
+        .wrap{
+            position: relative;
+            margin: 20px auto;
+            width: 1600px;
+            height: 900px;
+            border: 1px solid black;
+        }
+        img{
+            position: absolute;
+            width: 300px;
+            transition: all .2s;
+        }
+        #pic1{
+            left: 450px;
+            top: 630px;
+            transform: rotate(-30deg);
+        }
+        #pic2{
+            left: 700px;
+            top: 470px;
+            transform: rotate(45deg);
+        }
+        #pic3{
+            left: 400px;
+            top: 200px;
+            transform: rotate(-39deg);
+        }
+        #pic4{
+            left: 1000px;
+            top: 430px;
+            transform: rotate(-26deg);
+        }
+        #pic5{
+            left: 1200px;
+            top: 100px;
+            transform: rotate(30deg);
+        }
+        #pic6{
+            left: 130px;
+            top: 450px;
+            transform: rotate(-50deg);
+        }
+        #pic7{
+            left: 700px;
+            top: 100px;
+            transform: rotate(-25deg);
+        }
+        #pic8{
+            left: 1250px;
+            top: 390px;
+            transform: rotate(47deg);
+        }
+        #pic9{
+            left: 100px;
+            top: 50px;
+            transform: rotate(30deg);
+        }
+        #pic10{
+            left: 900px;
+            top: 100px;
+            transform: rotate(30deg);
+        }
+        img:hover{
+            box-shadow: 1px 1px 3px gray, -1px 0 3px gray;
+            z-index: 99;
+            animation: toCenter 1s;
+        }
+        @-webkit-keyframes toCenter {
+            0% {  }
+            100% { transform: rotate(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img id="pic1" src="http://himg2.huanqiu.com/attachment2010/2015/0319/14/54/20150319025421257.jpg">
+        <img id="pic2" src="http://cdn.duitang.com/uploads/item/201201/13/20120113235751_KFeAG.thumb.600_0.jpg">
+        <img id="pic3" src="http://imgcache.mysodao.com/img2/M00/BC/BE/CgAPDU9hTED-dPKEAADF6ybXLfk079_760x0x1.JPG" alt="">
+        <img id="pic4" src="http://i3.hoopchina.com.cn/user/289/2737289/13133937100.jpg" alt="">
+        <img id="pic5" src="http://jiangsu.china.com.cn/uploadfile/2014/0820/20140820022452205.jpg" alt="">
+        <img id="pic6" src="http://ww1.sinaimg.cn/large/70fc8315gw1ewakjy026gj21jk23j1kx.jpg" alt="">
+        <img id="pic7" src="http://imgsrc.baidu.com/forum/pic/item/37ee578f2c145b9ab3fb95d0.jpg" alt="">
+        <img id="pic8" src="http://c.hiphotos.baidu.com/zhidao/pic/item/7acb0a46f21fbe095998e72769600c338744ad3a.jpg" alt="">
+        <img id="pic9" src="http://a0.att.hudong.com/11/33/01200000023787136847335923964.jpg" alt="">
+        <img id="pic10" src="http://imgsrc.baidu.com/forum/pic/item/b4006b3e6709c93d45cac27c9f3df8dcd100541c.jpg" alt="">
+    </div>
+</body>
+</html>
