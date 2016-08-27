@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 900px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img id="imgs" src="img/1.jpg">
+    </div>
+
+    <button id="one">one</button>
+    <button id="two">two</button>
+    <button id="three">three</button>
+    <button id="four">four</button>
+
+    <script>
+        document.getElementById("one").addEventListener("click", function(){
+            document.getElementById("imgs").src = "img/1.jpg";
+        });
+        document.getElementById("two").addEventListener("click", function(){
+            document.getElementById("imgs").src = "img/2.jpg";
+        });
+        document.getElementById("three").addEventListener("click", function(){
+            document.getElementById("imgs").src = "img/3.jpg";
+        });
+        document.getElementById("four").addEventListener("click", function(){
+            document.getElementById("imgs").src = "img/4.jpg";
+        });
+    </script>
+</body>
+</html>
