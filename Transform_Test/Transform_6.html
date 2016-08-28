@@ -107,6 +107,7 @@
         left: 200px;
         z-index: 99;
         transition: all .3s;
+        opacity: 0;
     }
     .three img{
         transition: all .3s;
@@ -117,6 +118,148 @@
     }
     .three:hover div{
         transform: skewX(90deg);
+        opacity: 1;
+    }
+
+    .four{
+        position: relative;
+    }
+    .four div{
+        position: absolute;
+        z-index: 99;
+        top: 50px;
+        left: 150px;
+        color: #fff;
+        transition: all .3s;
+    }
+    .four div p{
+        font-size: 1.5em;
+    }
+    .four img{
+        transition: all .3s;
+    }
+    .four:hover img{
+        transform: scale(1.2, 1.2);
+        opacity: .7;
+    }
+    .four:hover div{
+        transform: scale(.8, 0.8);
+    }
+    .four > div > nav{
+        position: relative;
+        left: -147px;
+        top: -187px;
+        width: 620px;
+        height: 380px;
+        border: 3px solid #fff;
+        opacity: 0;
+    }
+    .four:hover > div > nav{
+        opacity: 1;
+    }
+
+
+    .five{
+        position: relative;
+    }
+    .five > .five_1{
+        position: absolute;
+        z-index: 99;
+        color: #fff;
+        top: 100px;
+        left: 100px;
+        transition: all .3s;
+    }
+    .five img{
+        transition: all .3s;
+    }
+    .five:hover img{
+        transform: translate(-50px,0);
+        opacity: .7;
+    }
+    .five:hover .five_1{
+        transform: translate(0,-30px);
+    }
+    .five > .five_2{
+        position: absolute;
+        top: 0px;
+        z-index: 99;
+        width: 0;
+        height: 0;
+        border-width: 200px 650px;
+        border-style: solid;
+        border-color: transparent transparent rgba(255, 255, 255, .6) transparent;
+        transform: translate(0,195px);
+        transition: all .3s;
+    }
+    .five:hover > .five_2{
+        transform: translate(0,0);
+    }
+    .five > .five_2 button{
+        position: absolute;
+        left: -250px;
+        top: 120px;
+    }
+
+    .six{
+        position: relative;
+    }
+    .six .six_1{
+        position: absolute;
+        top: 180px;
+        left: 150px;
+        color: #000;
+        transition: all .3s;
+    }
+    .six:hover .six_1{
+        transform: translate(0,-50px);
+    }
+    .six img{
+        transition: all .3s;
+    }
+    .six:hover img{
+        transform: translate(-50px,0);
+        opacity: .8;
+    }
+
+    .six_2{
+        position: absolute;
+        top: 80px;
+        left: 100px;
+        width: 400px;
+        height: 250px;
+        z-index: 99;
+    }
+    .top, .bottom{
+        position: absolute;
+        left: -75px;
+        width: 0px;
+        height: 3px;
+        background-color: #fff;
+        transition: all .3s;
+    }
+    .left, .right{
+        position: absolute;
+        top: -50px;
+        width: 3px;
+        height: 0px;
+        background-color: #fff;
+        transition: all .3s;
+    }
+    .bottom{
+        bottom: 0px;
+    }
+    .right{
+        right: 0;
+    }
+
+    .six_2:hover .top,
+    .six_2:hover .bottom{
+        width: 550px;
+    }
+    .six_2:hover .left,
+    .six_2:hover .right{
+        height: 350px;
     }
     </style>
 </head>
@@ -147,14 +290,36 @@
                 <p>斜切效果</p>
             </div>
         </div>
-        <div>
+        <div class="four">
             <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img04.jpg">
+            <div>
+                <h1>缩放效果</h1>
+                <p>缩放效果</p>
+                <nav></nav>
+            </div>
         </div>
-        <div>
+        <div class="five">
             <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img05.jpg">
+            <div class="five_1">
+                <h1>缩放效果</h1>
+                <p>缩放效果</p>
+            </div>
+            <div class="five_2">
+                <button>button</button>
+            </div>
         </div>
-        <div>
+        <div class="six">
             <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img07.jpg">
+            <div class="six_1">
+                <h1>变换效果</h1>
+                <p>变换效果</p>
+            </div>
+            <div class="six_2">
+                <nav class="top"></nav>
+                <nav class="bottom"></nav>
+                <nav class="left"></nav>
+                <nav class="right"></nav>
+            </div>
         </div>
     </div>
 </body>
