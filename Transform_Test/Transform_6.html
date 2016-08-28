@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>6种鼠标悬停效果</title>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .wrap {
+        width: 100vw;
+    }
+    
+    .wrap > div {
+        position: relative;
+        display: inline-block;
+        width: 33vw;
+        overflow: hidden;
+    }
+    .one > div{
+        position: absolute;
+        top: 0;
+        left: 50px;
+        z-index: 99;
+    }
+    .one div > p{
+        position: relative;
+        background-color: #fff;
+        left: -150px;
+        transition: all .3s;
+    }
+    .one > img{
+        transition: all 0.3s;
+    }
+    .one:hover img{
+        opacity: 0.7;
+        transform: translate(-50px, 0);
+    }
+    .one:hover > div > p:nth-of-type(1){
+        transform: translate(150px,0);
+    }
+    .one:hover > div > p:nth-of-type(2){
+        transform: translate(150px,0);
+        transition-delay: .1s;
+    }
+    .one:hover > div > p:nth-of-type(3){
+        transform: translate(150px,0);
+        transition-delay: .2s;
+    }
+
+
+    .two{
+        position: relative;
+    }
+    .two > div{
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        z-index: 99;
+        color: #fff;
+    }
+    .two > div > nav{
+        position: relative;
+        top: -400px;
+        right: 40px;
+        width: 50px;
+        height: 30px;
+        border: 3px solid #fff;
+        transition: all 0.5s;
+    }
+    .two:hover > div > nav{
+        top: -100px;
+        right: 40px;
+        width: 500px;
+        height: 300px;
+        transform: rotate(360deg);
+    }
+    .two > div > p{
+        position: absolute;
+        top: 120px;
+        opacity: 0;
+        transition: .3s;
+    }
+    .two:hover > div > p{
+        top: 50px;
+        opacity: 1;
+    }
+    .two img{
+        overflow: hidden;
+        transition: all .3s;
+    }
+    .two:hover img{
+        transform: translate(-50px,0);
+        opacity: .7;
+    }
+
+
+    .three{
+        position: relative;
+    }
+    .three div{
+        position: absolute;
+        top: 150px;
+        left: 200px;
+        z-index: 99;
+        transition: all .3s;
+    }
+    .three img{
+        transition: all .3s;
+    }
+    .three:hover img{
+        transform: translate(-50px,0);
+        opacity: .7;
+    }
+    .three:hover div{
+        transform: skewX(90deg);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="one">
+            <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img01.jpg">
+            <div>
+                <h2>移动效果</h2>
+                <p>移动效果一</p>
+                <p>移动效果二</p>
+                <p>移动效果三</p>
+            </div>
+        </div>
+        <div class="two">
+            <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img02.jpg">
+            <div>
+                <h2>旋转效果</h2>
+                <p>旋转效果</p>
+                <nav></nav>
+            </div>
+        </div>
+        <div class="three">
+            <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img03.jpg">
+            <div>
+                <h2>斜切效果</h2>
+                <p>斜切效果</p>
+            </div>
+        </div>
+        <div>
+            <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img04.jpg">
+        </div>
+        <div>
+            <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img05.jpg">
+        </div>
+        <div>
+            <img src="http://www.17sucai.com/preview/355489/2015-09-02/css3%E5%9B%BE%E7%89%87%E5%8A%A8%E6%80%81%E6%8F%90%E7%A4%BA%E6%95%88%E6%9E%9C/img/img07.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
