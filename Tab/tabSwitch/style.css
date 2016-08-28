@@ -1,0 +1,37 @@
+.top ul{
+  list-style-type: none;
+}
+.top ul li{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+.top ul li:first-child{
+  background-color: red;
+}
+.top ul li:last-child{
+  background-color: blue;
+}
+
+.bottom ul{
+  list-style: none;
+}
+
+.first li{
+   display: none;
+   float: left;
+   margin: 10px;
+   width: 100px;
+   height: 100px;
+   background: red;
+}
+.second li{
+  float: left;
+  margin: 10px;
+  width: 140px;
+  height: 80px;
+  background: blue;
+}
