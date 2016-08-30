@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.wrap{
+				width: 320px;
+				height: 100px;
+			}
+			.wrap div{
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background: blue;
+				transition: all .4s;
+			}
+			.wrap:hover div:nth-of-type(1),
+			.wrap:hover div:nth-of-type(5),
+			.wrap:hover div:nth-of-type(21),
+			.wrap:hover div:nth-of-type(25){
+				background: red;
+				border-radius: 50%;
+				transform: scale(0,0);
+			}
+
+			.wrap:hover div:nth-of-type(2),
+			.wrap:hover div:nth-of-type(4),
+			.wrap:hover div:nth-of-type(6),
+			.wrap:hover div:nth-of-type(10),
+			.wrap:hover div:nth-of-type(16),
+			.wrap:hover div:nth-of-type(20),
+			.wrap:hover div:nth-of-type(22),
+			.wrap:hover div:nth-of-type(24){
+				background: red;
+				border-radius: 50%;
+				transform: scale(0,0);
+				transition-delay: .1s;
+			}
+
+			.wrap:hover div:nth-of-type(3),
+			.wrap:hover div:nth-of-type(7),
+			.wrap:hover div:nth-of-type(9),
+			.wrap:hover div:nth-of-type(11),
+			.wrap:hover div:nth-of-type(15),
+			.wrap:hover div:nth-of-type(17),
+			.wrap:hover div:nth-of-type(19),
+			.wrap:hover div:nth-of-type(23){
+				background: red;
+				border-radius: 50%;
+				transform: scale(0,0);
+				transition-delay: .2s;
+			}
+
+			.wrap:hover div:nth-of-type(8),
+			.wrap:hover div:nth-of-type(12),
+			.wrap:hover div:nth-of-type(14),
+			.wrap:hover div:nth-of-type(18){
+				background: red;
+				border-radius: 50%;
+				transform: scale(0,0);
+				transition-delay: .3s;
+			}
+			.wrap:hover div:nth-of-type(13){
+				transition-delay: .4s;
+				background: red;
+				border-radius: 50%;
+				transform: scale(0,0);
+			}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+    </div>
+</body>
+</html>
