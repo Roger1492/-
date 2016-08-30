@@ -19,3 +19,19 @@
 .switch > div:not(:first-child){
   display: none;
 }
+
+#one ul{
+  list-style-type: none;
+}
+#one ul li{
+  float: left;
+  padding: 0px 10px
+}
+#one ul li a{
+  text-decoration: none;
+  line-height: 40px;
+}
+#one ul li a:hover{
+  color: #000;
+  font-style: italic;
+}
