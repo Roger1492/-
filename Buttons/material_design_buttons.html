@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  	div{
+  		margin: 30px auto;
+  		width: 670px;
+  	}
+  	.btn{
+		margin: 10px;
+		width: 200px;
+		height: 50px;
+		border: none;
+		border-radius: 5px;
+		outline: none;
+		font-size: 1.5em;
+		color: #eee;
+		cursor: pointer;
+		box-shadow: 3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+		transition: all .2s;
+	}
+	.teal{
+	  background-color: #009688;
+	  box-shadow: 0 5px 0 #00796b,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.purple{
+	  background-color: #9C27B0;
+	  box-shadow: 0 5px 0 #7B1FA2,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.indigo{
+	  background-color: #3F51B5;
+	  box-shadow: 0 5px 0 #303F9F,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.lightblue{
+	  background-color: #03A9F4;
+	  box-shadow: 0 5px 0 #0288D1,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.green{
+	  background-color: #4CAF50;
+	  box-shadow: 0 5px 0 #388E3C,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.yellow{
+	  background-color: #FFEB3B;
+	  box-shadow: 0 5px 0 #FBC02D,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.cyan{
+	  background-color: #00BCD4;
+	  box-shadow: 0 5px 0 #0097A7,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.red{
+	  background-color: #F44336;
+	  box-shadow: 0 5px 0 #D32F2F,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.pink{
+		background-color: #E91E63;
+		box-shadow: 0 5px 0 #C2185B,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.blue{
+		background-color: #2196F3;
+		box-shadow: 0 5px 0 #1976D2,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.lime{
+		background-color: #CDDC39;
+		box-shadow: 0 5px 0 #AFB42B,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.amber{
+		background-color: #FFC107;
+		box-shadow: 0 5px 0 #FFA000,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.gray{
+		background-color: #9E9E9E;
+		box-shadow: 0 5px 0 #616161,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.brown{
+		background-color: #795548;
+		box-shadow: 0 5px 0 #5D4037,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+	.orange{
+		background-color: #FF9800;
+		box-shadow: 0 5px 0 #F57C00,3px 4px 5px gray, -3px 4px 5px gray,0 8px 4px gray;
+	}
+
+
+
+	.teal:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #00796B;
+	}
+	.purple:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #7B1FA2;
+	}
+	.indigo:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #303F9F;
+	}
+	.lightblue:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #0288D1;
+	}
+	.green:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #388E3C;
+	}
+	.yellow:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #FBC02D;
+	}
+	.cyan:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #0097A7;
+	}
+	.red:hover{
+	  	transform: translate(0,2px);
+	  	box-shadow: 0 3px 0 #D32F2F;
+	}
+	.pink:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 0 #C2185B;
+	}
+	.blue:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 0 #1976D2;
+	}
+	.lime:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 0 #AFB42B;
+	}
+	.amber:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 0 #FFA000;
+	}
+	.gray:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 0 #616161;
+	}
+	.brown:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 0 #5D4037;
+	}
+	.orange:hover{
+		transform: translate(0,2px);
+		box-shadow: 0 3px 3 #F57C00;
+	}
+
+  </style>
+</head>
+<body>
+	<div>
+	    <button class="btn teal">teal</button>
+	    <button class="btn purple">purple</button>
+	    <button class="btn indigo">indigo</button>
+	    <button class="btn lightblue">lightblue</button>
+	    <button class="btn green">green</button>
+	    <button class="btn yellow">yellow</button>
+	    <button class="btn cyan">cyan</button>
+	    <button class="btn red">red</button>
+	    <button class="btn pink">pink</button>
+	    <button class="btn blue">blue</button>
+	    <button class="btn lime">lime</button>
+	    <button class="btn amber">amber</button>
+	    <button class="btn gray">gray</button>
+	    <button class="btn brown">brown</button>
+	    <button class="btn orange">orange</button>
+	</div>
+</body>
+</html>
