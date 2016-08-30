@@ -1,0 +1,21 @@
+.tab > div{
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: #eee;
+  line-height: 50px;
+  text-align: center;
+}
+.tab > div:hover{
+  background: red;
+  color: #eee;
+}
+
+.switch > div{
+  width: 515px;
+  height: 200px;
+  border: 1px solid;
+}
+.switch > div:not(:first-child){
+  display: none;
+}
