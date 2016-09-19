@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Loaders</title>
+  <style>
+    div{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 1px solid;
+      }
+
+      .one span{
+        position: relative;
+        top: 80px;
+        display: inline-block;
+        width: 6px;
+        height: 10px;
+        background:-webkit-linear-gradient(cyan,whitesmoke,cyan);
+      }
+      .one span:nth-of-type(1){
+        animation: run 2s 0.1s infinite;
+      }
+      .one span:nth-of-type(2){
+        animation: run 2s 0.2s infinite;
+      }
+      .one span:nth-of-type(3){
+        animation: run 2s 0.3s infinite;
+      }
+      .one span:nth-of-type(4){
+        animation: run 2s 0.4s infinite;
+      }
+      .one span:nth-of-type(5){
+        animation: run 2s 0.5s infinite;
+      }
+      .one span:nth-of-type(6){
+        animation: run 2s 0.6s infinite;
+      }
+      .one span:nth-of-type(7){
+        animation: run 2s 0.7s infinite;
+      }
+      .one span:nth-of-type(8){
+        animation: run 2s .8s infinite;
+      }
+      .one span:nth-of-type(9){
+        animation: run 2s .9s infinite;
+      }
+      .one span:nth-of-type(10){
+        animation: run 2s 1s infinite;
+      }
+      .one span:nth-of-type(11){
+        animation: run 2s 1.1s infinite;
+      }
+      .one span:nth-of-type(12){
+        animation: run 2s 1.2s infinite;
+      }
+      .one span:nth-of-type(13){
+        animation: run 2s 1.3s infinite;
+      }
+      .one span:nth-of-type(14){
+        animation: run 2s 1.4s infinite;
+      }
+      .one span:nth-of-type(15){
+        animation: run 2s 1.5s infinite;
+      }
+      .one span:nth-of-type(16){
+        animation: run 2s 1.6s infinite;
+      }
+      .one span:nth-of-type(17){
+        animation: run 2s 1.7s infinite;
+      }
+      .one span:nth-of-type(18){
+        animation: run 2s 1.8s infinite;
+      }
+      .one span:nth-of-type(19){
+        animation: run 2s 1.9s infinite;
+      }
+      .one span:nth-of-type(20){
+        animation: run 2s 2s infinite;
+      }
+      .one span:nth-of-type(21){
+        animation: run 2s 2.1s infinite;
+      }
+      .one span:nth-of-type(22){
+        animation: run 2s 2.2s infinite;
+      }
+      .one span:nth-of-type(23){
+        animation: run 2s 2.3s infinite;
+      }
+      .one span:nth-of-type(24){
+        animation: run 2s 2.4s infinite;
+      }
+      .one span:nth-of-type(25){
+        animation: run 2s 2.5s infinite;
+      }
+      .one span:nth-of-type(26){
+        animation: run 2s 2.6s infinite;
+      }
+      .one span:nth-of-type(27){
+        animation: run 2s 2.7s infinite;
+      }
+      .one span:nth-of-type(28){
+        animation: run 2s 2.8s infinite;
+      }
+      .one span:nth-of-type(29){
+        animation: run 2s 2.9s infinite;
+      }
+      .one span:nth-of-type(30){
+        animation: run 2s 3s infinite;
+      }
+      .one span:nth-of-type(31){
+        animation: run 2s 3.1s infinite;
+      }
+      .one span:nth-of-type(32){
+        animation: run 2s 3.3s infinite;
+      }
+      .one span:nth-of-type(33){
+        animation: run 2s 3.4s infinite;
+      }
+      .one span:nth-of-type(34){
+        animation: run 2s 3.5s infinite;
+      }
+      .one span:nth-of-type(35){
+        animation: run 2s 3.6s infinite;
+      }
+      .one span:nth-of-type(36){
+        animation: run 2s 3.7s infinite;
+      }
+      .one span:nth-of-type(37){
+        animation: run 2s 3.8s infinite;
+      }
+
+
+      @-webkit-keyframes run {
+        0% { background: red;}
+        50% { transform: scale(1,10);}
+        100% { background: blue}
+      }
+
+      /* ---------------------------------------
+      ---------------------------------------
+      --------------------------------------- */
+      .two > nav{
+        position: relative;
+        left: 70px;
+        top: 70px;
+        width: 40px;
+        height: 40px;
+        background: cyan;
+        display: table-cell;
+      }
+      .two > nav:nth-of-type(1){
+        animation: two 2s 0.1s infinite;
+      }
+      .two > nav:nth-of-type(2){
+        animation: two 2s 0.2s infinite;
+      }
+      .two > nav:nth-of-type(3){
+        animation: two 2s 0.3s infinite;
+      }
+      .two > nav:nth-of-type(4){
+        animation: two 2s 0.4s infinite;
+      }
+      .two > nav:nth-of-type(5){
+        animation: two 2s 0.5s infinite;
+      }
+      .two > nav:nth-of-type(6){
+        animation: two 2s 0.6s infinite;
+      }
+      @-webkit-keyframes two{
+        0% {background: #0DFEFE;}
+        50% { transform: scale(0.02,1);}
+      }
+
+
+      .three > nav{
+        position: relative;
+        left: 60px;
+        top: 150px;
+        display: inline-block;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: blue;
+      }
+      .three > nav:nth-of-type(1){
+        animation: three 1s infinite ease-in-out;
+      }
+      .three > nav:nth-of-type(2){
+        animation: three 1s 0.1s infinite ease-in-out;
+      }
+      .three > nav:nth-of-type(3){
+        animation: three 1s 0.2s infinite ease-in-out;
+      }
+      .three > nav:nth-of-type(4){
+        animation: three 1s 0.3s infinite ease-in-out;
+      }
+      .three > nav:nth-of-type(5){
+        animation: three 1s 0.4s infinite ease-in-out;
+      }
+      .three > nav:nth-of-type(6){
+        animation: three 1s 0.5s infinite ease-in-out;
+      }
+      @-webkit-keyframes three{
+        50% { transform: translateY(-100px) scale(1,1.3); background:#5959F6;}
+      }
+
+
+      .four > nav{
+        position: relative;
+        left: 50px;
+        top: 80px;
+        display: table-cell;
+        width: 40px;
+        height: 40px;
+        background: red;
+      }
+      .four > nav:nth-of-type(1){
+        animation: four 1s infinite;
+      }
+      .four > nav:nth-of-type(2){
+        animation: four 1s 0.03s infinite;
+      }
+      .four > nav:nth-of-type(3){
+        animation: four 1s 0.06s infinite;
+      }
+      .four > nav:nth-of-type(4){
+        animation: four 1s 0.09s infinite;
+      }
+      .four > nav:nth-of-type(5){
+        animation: four 1s 0.12s infinite;
+      }
+      .four > nav:nth-of-type(6){
+        animation: four 1s 0.15s infinite;
+      }
+      .four > nav:nth-of-type(7){
+        animation: four 1s 0.18s infinite;
+      }
+      .four > nav:nth-of-type(8){
+        animation: four 1s 0.21s infinite;
+      }
+      @-webkit-keyframes four{
+        50% { transform: scale(0.7, 0.01); background:#F55555;}
+      }
+
+
+      .five > nav{
+        position: relative;
+        left: 100px;
+        display: inline-block;
+        width: 6px;
+        height: 100px;
+        background: blue;
+        border-radius: 5px;
+        transform-origin: 3px 2px;
+      }
+      .five > nav:nth-of-type(1){
+        animation: five 1s infinite ease-out;
+      }
+      .five > nav:nth-of-type(2){
+        animation: five 1s 0.02s infinite ease-out;
+      }
+      .five > nav:nth-of-type(3){
+        animation: five 1s 0.04s infinite ease-out;
+      }
+      .five > nav:nth-of-type(4){
+        animation: five 1s 0.06s infinite ease-out;
+      }
+      .five > nav:nth-of-type(5){
+        animation: five 1s 0.08s infinite ease-out;
+      }
+      .five > nav:nth-of-type(6){
+        animation: five 1s 0.1s infinite ease-out;
+      }
+      .five > nav:nth-of-type(7){
+        animation: five 1s 0.12s infinite ease-out;
+      }
+      .five > nav:nth-of-type(8){
+        animation: five 1s 0.14s infinite ease-out;
+      }
+      .five > nav:nth-of-type(9){
+        animation: five 1s 0.16s infinite ease-out;
+      }
+      .five > nav:nth-of-type(10){
+        animation: five 1s 0.18s infinite ease-out;
+      }
+      .five > nav:nth-of-type(11){
+        animation: five 1s 0.2s infinite ease-out;
+      }
+      .five > nav:nth-of-type(12){
+        animation: five 1s 0.22s infinite ease-out;
+      }
+      .five > nav:nth-of-type(13){
+        animation: five 1s 0.24s infinite ease-out;
+      }
+      .five > nav:nth-of-type(14){
+        animation: five 1s 0.26s infinite ease-out;
+      }
+      .five > nav:nth-of-type(15){
+        animation: five 1s 0.28s infinite ease-out;
+      }
+      .five > nav:nth-of-type(16){
+        animation: five 1s 0.3s infinite ease-out;
+      }
+      .five > nav:nth-of-type(17){
+        animation: five 1s 0.32s infinite ease-out;
+      }
+      .five > nav:nth-of-type(18){
+        animation: five 1s 0.34s infinite ease-out;
+      }
+      .five > nav:nth-of-type(19){
+        animation: five 1s 0.36s infinite ease-out;
+      }
+      .five > nav:nth-of-type(20){
+        animation: five 1s 0.38s infinite ease-out;
+      }
+
+      @-webkit-keyframes five{
+        50% {
+          transform: rotate(40deg);
+          background: #6262DF;
+        }
+      }
+
+      .six > nav{
+        width: 200px;
+        height: 30px;
+        background: rgba(255,0,0,0.2);
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+      .six > nav > nav{
+        position: absolute;
+        top: 0px;
+        width: 200px;
+        height: 30px;
+        background: red;
+        animation: six 2s infinite ease-out;
+      }
+      @-webkit-keyframes six{
+        0% {width: 0;}
+        99% {width: 200px;opacity: 1;}
+        100% {opacity: 0;}
+      }
+  </style>
+</head>
+<body>
+<div class="one">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  <div class="two">
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+  </div>
+  <div class="three">
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+  </div>
+  <div class="four">
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+  </div>
+  <div class="five">
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+  </div>
+  <div class="six">
+    <nav>LOADING
+      <nav></nav>
+    </nav>
+  </div>
+  <div class="seven">
+    
+  </div>
+</body>
+</html>
