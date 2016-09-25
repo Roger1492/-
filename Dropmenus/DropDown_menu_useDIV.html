@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .wrap{
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 50px;
+        background: gray;
+        text-align:center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .wrap > nav{
+        position: absolute;
+        top: 0px;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        background:red;
+        color: white;
+        line-height: 50px;
+        opacity: 0;
+        transition: all 1s;
+        cursor: pointer;
+      }
+      .wrap:hover > .s1{
+        transform: translateY(50px);
+        opacity: 1;
+        z-index: -99;
+      }
+      .wrap:hover > .s2{
+        transform: translateY(100px);
+        opacity: 1;
+      }
+      .wrap:hover > .s3{
+        transform: translateY(150px);
+        opacity: 1;
+      }
+      .wrap:hover > .s4{
+        transform: translateY(200px);
+        opacity: 1;
+      }
+      .wrap:hover > .s5{
+        transform: translateY(250px);
+        opacity: 1;
+      }
+      .wrap > nav:hover{
+        background:blue;
+      }
+  </style>
+</head>
+<body>
+  <div class="wrap">Hover
+    <nav class="s1">Loader one</nav>
+    <nav class="s2">Loader two</nav>
+    <nav class="s3">Loader three</nav>
+    <nav class="s4">Loader four</nav>
+    <nav class="s5">Loader five</nav>
+  </div>
+  <div class="wrap">Hover
+    <nav class="s1">Loader one</nav>
+    <nav class="s2">Loader two</nav>
+    <nav class="s3">Loader three
+      <nav>JavaScript</nav>
+      <nav>Java</nav>
+      <nav>Android</nav>
+    </nav>
+    <nav class="s4">Loader four</nav>
+    <nav class="s5">Loader five</nav>
+  </div>
+  <div class="wrap">Hover
+    <nav class="s1">Loader one</nav>
+    <nav class="s2">Loader two</nav>
+    <nav class="s3">Loader three</nav>
+    <nav class="s4">Loader four</nav>
+    <nav class="s5">Loader five</nav>
+  </div>
+  <div class="wrap">Hover
+    <nav class="s1">Loader one</nav>
+    <nav class="s2">Loader two</nav>
+    <nav class="s3">Loader three</nav>
+    <nav class="s4">Loader four</nav>
+    <nav class="s5">Loader five</nav>
+  </div>
+  <div class="wrap">Hover
+    <nav class="s1">Loader one</nav>
+    <nav class="s2">Loader two</nav>
+    <nav class="s3">Loader three</nav>
+    <nav class="s4">Loader four</nav>
+    <nav class="s5">Loader five</nav>
+  </div>
+</body>
+</html>
