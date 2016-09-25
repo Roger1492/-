@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>超酷分页页码</title>
+    <style>
+    #wrap3 {
+        overflow: hidden;
+        position: relative;
+        width: 500px;
+        height: 40px;
+        background: red;
+    }
+    
+    #wrap3 nav {
+        display: inline-block;
+        height: 40px;
+    }
+    
+    #n {
+        transform: translateX(100px);
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        left: -100px;
+        line-height: 40px;
+        width: 500px;
+    }
+    
+    #n:hover {
+        color: #fff;
+    }
+    
+    #n123 {
+        position: relative;
+        left: -10px;
+        height: 40px;
+        width: 130px;
+        transform: translateX(-130px);
+        background: blue;
+        line-height: 30px;
+        z-index: 99;
+    }
+    
+    #n456 {
+        position: relative;
+        transform: translateX(120px);
+        width: 130px;
+        right: -10px;
+        float: right;
+        background: blue;
+        height: 40px;
+        line-height: 30px;
+        z-index: 99;
+    }
+    
+    #n123 > nav,
+    #n456 > nav {
+        position: relative;
+        width: 40px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    #n123 > nav:hover,
+    #n456 > nav:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+    
+    #left,
+    #right {
+        width: 0px;
+        height: 40px;
+        position: absolute;
+        background: #ccc;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+    }
+    
+    #left {
+        left: 0px;
+    }
+    
+    #right {
+        right: 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap3">
+        <nav id="n123">
+            <nav>1</nav>
+            <nav>2</nav>
+            <nav>3</nav>
+        </nav>
+        <nav id="n">Next</nav>
+        <nav id="n456">
+            <nav>4</nav>
+            <nav>5</nav>
+            <nav>6</nav>
+        </nav>
+        <nav id="left">&gt;</nav>
+        <nav id="right">&lt;</nav>
+    </div>
+    <script>
+    var wrap3 = document.getElementById("wrap3");
+    var n = document.getElementById("n");
+    var n123 = document.getElementById("n123");
+    var n456 = document.getElementById("n456");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+
+    wrap3.onmouseover = function() {
+        left.style.opacity = "1";
+        left.style.transition = "all .5s";
+        left.style.width = "40px";
+        right.style.opacity = "1";
+        right.style.transition = "all .5s";
+        right.style.width = "40px";
+    }
+    wrap3.onmouseout = function() {
+        left.style.opacity = "0";
+        left.style.width = "0px";
+        right.style.opacity = "0";
+        right.style.width = "0px";
+
+        n123.style.transform = "translateX(-130px)";
+        n456.style.transform = "translateX(120px)";
+    }
+    n.onclick = function() {
+        n123.style.transform = "translateX(0px)";
+        n123.style.transition = "all 1s";
+        n456.style.transform = "translateX(0px)";
+        n456.style.transition = "all 1s";
+    };
+    </script>
+</body>
+
+</html>
