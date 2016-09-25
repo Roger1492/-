@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CheckBox的方块效果</title>
+    <style type="text/css">
+    #wrap1 {
+        position: relative;
+        width: 200px;
+        height: 100px;
+        background: #ddd;
+    }
+    
+    #one,
+    #two {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+    
+    #two {
+        margin-left: 100px;
+        transform: rotate(180deg);
+    }
+    
+    #first {
+        width: 0px;
+        height: 90px;
+        background: #eee;
+        margin: 5px;
+        background: green;
+    }
+    
+    #second {
+        width: 90px;
+        height: 90px;
+        background: #eee;
+        margin: 5px;
+        background: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap1">
+        <nav id="one">
+            <nav id="first"></nav>
+        </nav>
+        <nav id="two">
+            <nav id="second"></nav>
+        </nav>
+    </div>
+    <div class="wrap2">
+      
+    </div>
+
+    <script type="text/javascript">
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
+    var first = document.getElementById("first");
+    var second = document.getElementById("second");
+
+    one.onclick = function() {
+        first.style.width = "90px";
+        second.style.width = "0px";
+        first.style.transition = "all .5s ease-in";
+        second.style.transition = "all .5s ease-in";
+        second.stye.transformOrigin = "100% 50%";
+    }
+    two.onclick = function() {
+        first.style.width = "0px";
+        second.style.width = "90px";
+        first.style.transition = "all 1s";
+        second.style.transition = "all 1s";
+    }
+    </script>
+</body>
+
+</html>
