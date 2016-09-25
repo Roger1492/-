@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #wrap2 {
+        position: relative;
+        overflow: hidden;
+        width: 234px;
+        height: 50px;
+        background: #eee;
+    }
+    
+    p {
+        position: absolute;
+        display: inline-block;
+        font-size: 2em;
+        margin-top: 0px;
+        transform: translateX(-90px);
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    nav {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+    
+    nav:nth-of-type(1) {
+        background: blue;
+        transform: translateX(-50px);
+    }
+    
+    nav:nth-of-type(2) {
+        background: green;
+        transform: translateX(-110px);
+    }
+    
+    nav:nth-of-type(3) {
+        background: orange;
+        transform: translateX(-160px);
+    }
+    
+    nav:nth-of-type(4) {
+        background: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap2">
+        <nav id="one"></nav>
+        <nav id="two"></nav>
+        <nav id="three"></nav>
+        <p id="share">share</p>
+        <nav id="four"></nav>
+    </div>
+    <script>
+    var wrap2 = document.getElementById("wrap2");
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
+    var three = document.getElementById("three");
+    var four = document.getElementById("four");
+
+    wrap2.onclick = function() {
+        share.style.fontSize = "0em";
+        share.style.transform = "translateX(0px)";
+        share.style.transition = "all .8s";
+        one.style.transform = "translateX(0px)";
+        one.style.transition = "all 1s 2s";
+        two.style.transform = "translateX(0px)";
+        two.style.transition = "all 1s 1s ";
+        three.style.transform = "translateX(0px)";
+        three.style.transition = "all 1s";
+        four.style.transform = "translateX(20px)";
+        four.style.transition = "all 1s";
+    }
+    </script>
+</body>
+
+</html>
