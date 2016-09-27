@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div.wrap {
+        position: relative;
+        width: 300px;
+        height: 30px;
+        border: 1px solid #eee;
+        overflow: hidden;
+    }
+    
+    .content {
+        position: relative;
+        width: 600px;
+        height: 30px;
+        animation: run 4s infinite ease;
+    }
+    
+    .left,
+    .right {
+        width: 300px;
+        height: 30px;
+        position: absolute;
+    }
+    
+    .left {
+        background: red;
+    }
+    
+    .right {
+        left: 300px;
+        background: blue;
+    }
+    
+    .rect {
+        position: absolute;
+        top: 5px;
+        left: 290px;
+        width: 20px;
+        height: 20px;
+        background: yellow;
+        transform: rotate(45deg);
+        animation: round 2s infinite linear;
+    }
+    
+    @-webkit-keyframes run {
+        50% {
+            transform: translateX(-300px);
+        }
+    }
+    
+    @-webkit-keyframes round {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="rect"></div>
+        </div>
+    </div>
+</body>
+
+</html>
