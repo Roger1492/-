@@ -1,0 +1,202 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #777;
+}
+
+.wrap {
+    position: relative;
+    left: 30%;
+    width: 600px;
+    height: 300px;
+    border: 1px solid #fff;
+}
+
+#album {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#album > img {
+    width: 150px;
+    height: 150px;
+}
+#album > img:active{
+	transform: translate(2px,2px);
+	width: 146px;
+	height: 146px;
+}
+
+#CDPlayer {
+    position: absolute;
+    left: 130px;
+    top: 52px;
+    width: 350px;
+    height: 144px;
+}
+
+#tape {
+    position: absolute;
+    transform: translateX(-78px);
+    width: 140px;
+    height: 140px;
+    background: #eee;
+    border-radius: 50%;
+    border: 2px solid lightblue;
+    z-index: -1;
+}
+
+#tape > .circle_one {
+    position: absolute;
+    left: 45px;
+    top: 45px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+#tape > .circle_one > .circle_two {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f2f2f2;
+}
+
+#operation {
+    position: absolute;
+    transform: translateX(-20px);
+    width: 200px;
+    height: 144px;
+    opacity: 0;
+}
+
+.control {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 40px;
+    background: #eee;
+    font-size: .8em;
+    color: #333;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.control > .gt,
+.control > .lt,
+.control > .play_pause {
+    display: none;
+}
+
+.control:hover > .gt,
+.control:hover > .lt,
+.control:hover > .play_pause {
+    display: block;
+}
+
+.control > .gt {
+    position: absolute;
+    width: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.control > .lt {
+    position: absolute;
+    margin-left: 160px;
+    width: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.control > .songTitle {
+    position: absolute;
+    top: -13px;
+    left: 50px;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    z-index: 2;
+    transition: all .3s;
+}
+
+.control:hover > .songTitle {
+    display: none;
+}
+
+.play_pause {
+    position: absolute;
+    left: 80px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.play_pause > div {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    background: #333;
+}
+
+.play_pause > div:nth-of-type(1) {
+    left: 10px;
+}
+
+.play_pause > div:nth-of-type(2) {
+    left: 25px;
+}
+
+
+/* #progress_bar{
+	position: absolute;
+	top: 80px;
+	left: 10px;
+	width: 180px;
+	height: 2px;
+} */
+
+#progress {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 180px;
+    height: 20px;
+    display: block;
+}
+
+.time {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    width: 170px;
+    height: 20px;
+}
+
+.time > div {
+    display: inline-block;
+    font-size: .6em;
+    color: #f2f2f2;
+}
+
+.time > div:nth-of-type(1) {
+    float: left;
+}
+
+.time > div:nth-of-type(2) {
+    float: right;
+}

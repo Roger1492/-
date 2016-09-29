@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CD Player</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="album">
+            <img id="albumimg" src="雨宮天 - 奏 (かなで).jpg">
+            <audio id="audioSource" src="雨宮天 - 奏 (かなで).mp3"></audio>
+        </div>
+        <div id="CDPlayer">
+            <div id="tape">
+                <div class="circle_one">
+                    <div class="circle_two"></div>
+                </div>
+            </div>
+            <div id="operation">
+                <div class="control">
+                    <div class="gt">&gt;</div>
+                    <div class="lt">&lt;</div>
+                    <p class="songTitle">雨宮天 - 奏</p>
+                    <div class="play_pause">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <!-- <progress id="progress_bar" value="" max="60"></progress> -->
+                <div id="progress">
+                </div>
+                <div class="time">
+                    <div>0:00</div>
+                    <div>5:04</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
