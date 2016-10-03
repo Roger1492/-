@@ -1,3 +1,6 @@
+body{
+	background: rgba(0,0,0,.5);
+}
 .content{
 	position: relative;
 	width: 500px;
@@ -10,28 +13,57 @@
 	height: 100px;
 	background: rgba(0, 0, 0, 0.2);
 }
+.backToPre,.songtitle,.share{
+	/* display: inline-block; */
+	float: left;
+	/* position: absolute; */
+}
+.backToPre,.share{
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+}
+.songtitle{
+	width: 300px;
+	height: 100px;
+}
+.songtitle > nav:first-child{
+	margin-top: 20px;
+}
 #music{
 	position: absolute;
 	margin-top: 100px;
 	width: 500px;
 	height: 600px;
-	background: rgba(0,0,0,.3);
+	/* background: rgba(0,0,0,.3); */
+	background: green;
+}
+#lyrics{
+	position: absolute;
+	margin-top: 100px;
+	width: 500px;
+	height: 600px;
+	background:  red;
 }
 #footer{
 	position: absolute;
 	margin-top: 700px;
 	width: 500px;
-	height: 100px;
+	height: 150px;
 	background: rgba(0,0,0,.2);
 }
-#album,#lyrics{
+.selection{
 	position: absolute;
+	top: 80px;
 	width: 500px;
-	height: 600px;
+	background: gray;
 }
-#album{
-	background: red;
-}
-#lyrics{
-	background: blue;
+.selection > nav{
+	display: inline-block;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	width: 96px;
 }
