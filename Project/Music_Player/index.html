@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Music Player</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="D:\CDN\font-awesome-4.6.3\css\font-awesome.min.css">
 </head>
+
 <body>
-    
     <div class="content">
         <div id="header">
-            <nav class="backToPre"><i class="fa fa-arrow-left fa-3x"></i></nav>
+            <nav class="backToPre"><i class="fa fa-arrow-left fa-2x"></i></nav>
             <nav class="songtitle">
                 <nav class="song">奏</nav>
                 <nav class="singer">スキマスイッチ</nav>
             </nav>
-            <nav class="share"><i class="fa fa-share-alt fa-3x"></i></nav>
+            <nav class="share"><i class="fa fa-share-alt fa-2x"></i></nav>
         </div>
-        <div id="music"></div>
-        <div id="lyrics"></div>
+        <div id="music">
+            <div class="pointer"></div>
+            <div class="CD">
+                <div class="img_wrap">
+                <!-- 图片大小在250像素最好 -->
+                    <img class="img_album" src="http://a0.att.hudong.com/62/17/01200000028599136359174336668_02_250_250.jpg" alt="">
+                </div>
+                <audio id="audioSource_1" src="F:\CloudMusic\Ramin Djawadi-Main Titles.mp3"></audio>
+            </div>
+            <div class="options">
+                <div class="heart"><i class="fa fa-heart-o"></i></div>
+                <div class="download"><i class="fa fa-download"></i></div>
+                <div class="comment"><i class="fa fa-commenting-o"></i></div>
+                <div class="operaion"><i class="fa fa-ellipsis-v"></i></div>
+            </div>
+        </div>
+        <div id="lyrics">2</div>
         <div id="footer">
-            <nav class="progress"></nav>
+            <nav class="progress">
+                <nav class="time_start">
+                    <span id="minutes">0</span>:<span id="seconds">00</span>
+                </nav>
+                <nav class="progress_wrap">
+                    <nav class="progress_bar"></nav>
+                </nav>
+                <nav class="time_end">
+                    <span>5</span>:<span>22</span>
+                </nav>
+            </nav>
             <nav class="selection">
                 <nav class="btn_loop"><i class="fa fa-repeat"></i></nav>
                 <nav class="btn_pre"><i class="fa fa-step-backward fa-2x"></i></nav>
-                <nav class="btn_play"><i class="fa fa-play fa-2x"></i></nav>
+                <nav class="btn_play"><i class="fa fa-play fa-2x"></i><i class="fa fa-pause fa-2x"></i></nav>
                 <nav class="btn_next"><i class="fa fa-step-forward fa-2x"></i></nav>
                 <nav class="btn_lists"><i class="fa fa-list-ul"></i></nav>
             </nav>
         </div>
     </div>
-
     <!-- <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script> -->
     <script src="js/script.js"></script>
+    <script src="js/jq.js"></script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
 </body>
+
 </html>

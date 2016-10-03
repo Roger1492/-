@@ -1,69 +1,164 @@
-body{
-	background: rgba(0,0,0,.5);
+body {
+    background: rgba(0, 0, 0, .3);
 }
-.content{
-	position: relative;
-	width: 500px;
-	height: 800px;
-	margin: 0px auto;
+
+.content {
+    position: relative;
+    width: 500px;
+    height: 800px;
+    margin: 0px auto;
 }
-#header{
+
+#header {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.backToPre,
+.songtitle,
+.share {
+    float: left;
+}
+
+.backToPre,
+.share {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.songtitle {
+    width: 300px;
+    height: 100px;
+}
+
+.songtitle > nav:first-child {
+    margin-top: 25px;
+}
+
+#music {
+    position: absolute;
+    margin-top: 100px;
+    width: 500px;
+    height: 600px;
+    background: gray;
+    z-index: 1;
+}
+.CD{
 	position: absolute;
-	width: 500px;
-	height: 100px;
-	background: rgba(0, 0, 0, 0.2);
+	left: 60px;
+	top: 100px;
+	width: 380px;
+	height: 380px;
+	border-radius: 50%;
+	background: rgba(0,0,0,.9);
+	box-shadow: 0 0 0 6px rgba(0,0,0,.2);
 }
-.backToPre,.songtitle,.share{
-	/* display: inline-block; */
-	float: left;
-	/* position: absolute; */
-}
-.backToPre,.share{
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
-	text-align: center;
-	color: #fff;
-}
-.songtitle{
-	width: 300px;
-	height: 100px;
-}
-.songtitle > nav:first-child{
-	margin-top: 20px;
-}
-#music{
+.img_wrap{
 	position: absolute;
-	margin-top: 100px;
-	width: 500px;
-	height: 600px;
-	/* background: rgba(0,0,0,.3); */
-	background: green;
+	left: 65px;
+	top: 65px;
+	background: white;
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
 }
-#lyrics{
+.img_album{
+	border-radius: 50%;
+}
+
+.options{
 	position: absolute;
-	margin-top: 100px;
-	width: 500px;
-	height: 600px;
-	background:  red;
+	left: 70px;
+	bottom: 30px;
+	width: 360px;
+	height: 50px;
+	/* background: black; */
 }
-#footer{
-	position: absolute;
-	margin-top: 700px;
-	width: 500px;
-	height: 150px;
-	background: rgba(0,0,0,.2);
-}
-.selection{
-	position: absolute;
-	top: 80px;
-	width: 500px;
-	background: gray;
-}
-.selection > nav{
+.options > div{
 	display: inline-block;
-	height: 80px;
+	width: 86px;
+	height: 40px;
+	line-height: 40px;
 	text-align: center;
-	line-height: 80px;
-	width: 96px;
+}
+#lyrics {
+    position: absolute;
+    margin-top: 100px;
+    width: 500px;
+    height: 600px;
+    background: gray;
+    z-index: -1;
+}
+
+#footer {
+    position: absolute;
+    margin-top: 700px;
+    width: 500px;
+    height: 120px;
+    background: rgba(0, 0, 0, .2);
+}
+
+.progress {
+    width: 500px;
+    height: 40px;
+}
+
+.progress > nav {
+    display: inline-block;
+}
+
+.time_start,
+.time_end {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.time_start {
+    left: 20px;
+}
+
+.time_end {
+    left: 25px;
+}
+
+.progress_wrap {
+    position: relative;
+    top: -7px;
+    left: 17px;
+    width: 360px;
+    height: 2px;
+    background: black;
+}
+
+.progress_bar {
+    position: absolute;
+    background: red;
+    width: 100px;
+    height: 2px;
+}
+
+.selection {
+    position: absolute;
+    top: 40px;
+    width: 500px;
+    height: 80px;
+    background: gray;
+}
+
+.selection > nav {
+    display: inline-block;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    width: 96px;
+}
+.btn_play > i:last-child{
+	display: none;
 }
