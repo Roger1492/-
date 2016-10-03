@@ -1,0 +1,37 @@
+.content{
+	position: relative;
+	width: 500px;
+	height: 800px;
+	margin: 0px auto;
+}
+#header{
+	position: absolute;
+	width: 500px;
+	height: 100px;
+	background: rgba(0, 0, 0, 0.2);
+}
+#music{
+	position: absolute;
+	margin-top: 100px;
+	width: 500px;
+	height: 600px;
+	background: rgba(0,0,0,.3);
+}
+#footer{
+	position: absolute;
+	margin-top: 700px;
+	width: 500px;
+	height: 100px;
+	background: rgba(0,0,0,.2);
+}
+#album,#lyrics{
+	position: absolute;
+	width: 500px;
+	height: 600px;
+}
+#album{
+	background: red;
+}
+#lyrics{
+	background: blue;
+}
