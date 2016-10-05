@@ -20,6 +20,7 @@ body {
 .songtitle,
 .share {
     float: left;
+    cursor: pointer;
 }
 
 .backToPre,
@@ -74,10 +75,10 @@ body {
 .options{
 	position: absolute;
 	left: 70px;
-	bottom: 30px;
+	bottom: 130px;
 	width: 360px;
 	height: 50px;
-	/* background: black; */
+	z-index: 99;
 }
 .options > div{
 	display: inline-block;
@@ -85,7 +86,9 @@ body {
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+	cursor: pointer;
 }
+
 #lyrics {
     position: absolute;
     margin-top: 100px;
@@ -158,6 +161,7 @@ body {
     text-align: center;
     line-height: 80px;
     width: 96px;
+    cursor: pointer;
 }
 .btn_play > i:last-child{
 	display: none;
