@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /* 第一个加载效果 */
+.wrap1{
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+}
+.circle{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.circle::before{
+  display: inline-block;
+  position: absolute;
+  left: 40px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+}
+.circle1{
+  transform: rotate(0deg);
+  animation: run 1.1s infinite;
+}
+.circle2{
+  transform: rotate(30deg);
+  animation: run 1.1s infinite .1s;
+}
+.circle3{
+  transform: rotate(60deg);
+  animation: run 1.1s infinite .2s;
+}
+.circle4{
+  transform: rotate(90deg);
+  animation: run 1.1s infinite .3s;
+}
+.circle5{
+  transform: rotate(120deg);
+  animation: run 1.1s infinite .4s;
+}
+.circle6{
+  transform: rotate(150deg);
+  animation: run 1.1s infinite .5s;
+}
+.circle7{
+  transform: rotate(180deg);
+  animation: run 1.1s infinite .6s;
+}
+.circle8{
+  transform: rotate(210deg);
+  animation: run 1.1s infinite .7s;
+}
+.circle9{
+  transform: rotate(240deg);
+  animation: run 1.1s infinite .8s;
+}
+.circle10{
+  transform: rotate(270deg);
+  animation: run 1.1s infinite .9s;
+}
+.circle11{
+  transform: rotate(300deg);
+  animation: run 1.1s infinite 1s;
+}
+.circle12{
+  transform: rotate(330deg);
+  animation: run 1.1s infinite 1.1s;
+}
+@keyframes run{
+  0% {opacity: 0;}
+  39%{opacity: 0;}
+  40% {opacity: 1;}
+  100% {opacity: 0;}
+}
+/* 第二个加载效果 */
+.wrap2{
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 100px;
+  margin: 0 20px;
+}
+.line{
+  width: 10px;
+  height: 20px;
+  background: red;
+  display: inline-block;
+  transform-origin: 50% 100%;
+}
+.line1{
+  animation: line 1.3s infinite;
+}
+.line2{
+  animation: line 1.3s infinite .1s;
+}
+.line3{
+  animation: line 1.3s infinite .2s;
+}
+.line4{
+  animation: line 1.3s infinite .3s;
+}
+.line5{
+  animation: line 1.3s infinite .4s;
+}
+.line6{
+  animation: line 1.3s infinite .5s;
+}
+.line7{
+  animation: line 1.3s infinite .6s;
+}
+.line8{
+  animation: line 1.3s infinite .7s;
+}
+.line9{
+  animation: line 1.3s infinite .8s;
+}
+.line10{
+  animation: line 1.3s infinite .9s;
+}
+.line11{
+  animation: line 1.3s infinite 1s;
+}
+.line12{
+  animation: line 1.3s infinite 1.1s;
+}
+.line13{
+  animation: line 1.3s infinite 1.2s;
+}
+.line14{
+  animation: line 1.3s infinite 1.3s;
+}
+.line15{
+  animation: line 1.3s infinite 1.4s;
+}
+.line16{
+  animation: line 1.3s infinite 1.5s;
+}
+.line17{
+  animation: line 1.3s infinite 1.6s;
+}
+.line18{
+  animation: line 1.3s infinite 1.7s;
+}
+.line19{
+  animation: line 1.3s infinite 1.8s;
+}
+.line20{
+  animation: line 1.3s infinite 1.9s;
+}
+
+@keyframes line{
+  0% { transform: scaleY(1);}
+  20% {transform: scaleY(4); background: blue;}
+  40%{ transform: scaleY(1);background: green;}
+  100%{transform: scaleY(1)}
+}
+
+/* 第三个加载效果 */
+.wrap3{
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 20px;
+  margin: 0 20px;
+}
+.lines{
+  width: 10px;
+  height: 20px;
+  background: white;
+  display: inline-block;
+}
+.lines1{
+  animation: lines 2s infinite;
+}
+.lines2{
+  animation: lines 2s infinite .1s;
+}
+.lines3{
+  animation: lines 2s infinite .2s;
+}
+.lines4{
+  animation: lines 2s infinite .3s;
+}
+.lines5{
+  animation: lines 2s infinite .4s;
+}
+.lines6{
+  animation: lines 2s infinite .5s;
+}
+.lines7{
+  animation: lines 2s infinite .6s;
+}
+.lines8{
+  animation: lines 2s infinite .7s;
+}
+.lines9{
+  animation: lines 2s infinite .8s;
+}
+.lines10{
+  animation: lines 2s infinite .9s;
+}
+.lines11{
+  animation: lines 2s infinite 1s;
+}
+.lines12{
+  animation: lines 2s infinite 1.1s;
+}
+.lines13{
+  animation: lines 2s infinite 1.2s;
+}
+.lines14{
+  animation: lines 2s infinite 1.3s;
+}
+.lines15{
+  animation: lines 2s infinite 1.4s;
+}
+.lines16{
+  animation: lines 2s infinite 1.5s;
+}
+.lines17{
+  animation: lines 2s infinite 1.6s;
+}
+.lines18{
+  animation: lines 2s infinite 1.7s;
+}
+.lines19{
+  animation: lines 2s infinite 1.8s;
+}
+.lines20{
+  animation: lines 2s infinite 1.9s;
+}
+@keyframes lines{
+  0%{transform:scaleY(1)}
+  20%{transform: scaleY(5);background: orange}
+  40% {transform: scaleY(1);background: red;}
+  100%{transform: scaleY(1)}
+}
+  </style>
+</head>
+<body>
+  <div class="wrap1">
+    <div class="circle1 circle"></div>
+    <div class="circle2 circle"></div>
+    <div class="circle3 circle"></div>
+    <div class="circle4 circle"></div>
+    <div class="circle5 circle"></div>
+    <div class="circle6 circle"></div>
+    <div class="circle7 circle"></div>
+    <div class="circle8 circle"></div>
+    <div class="circle9 circle"></div>
+    <div class="circle10 circle"></div>
+    <div class="circle11 circle"></div>
+    <div class="circle12 circle"></div>
+  </div>
+  <div class="wrap2">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+    <div class="line line4"></div>
+    <div class="line line5"></div>
+    <div class="line line6"></div>
+    <div class="line line7"></div>
+    <div class="line line8"></div>
+    <div class="line line9"></div>
+    <div class="line line10"></div>
+    <div class="line line11"></div>
+    <div class="line line12"></div>
+    <div class="line line13"></div>
+    <div class="line line14"></div>
+    <div class="line line15"></div>
+    <div class="line line16"></div>
+    <div class="line line17"></div>
+    <div class="line line18"></div>
+    <div class="line line19"></div>
+    <div class="line line20"></div>
+  </div>
+  <div class="wrap3">
+    <div class="lines lines1"></div>
+    <div class="lines lines2"></div>
+    <div class="lines lines3"></div>
+    <div class="lines lines4"></div>
+    <div class="lines lines5"></div>
+    <div class="lines lines6"></div>
+    <div class="lines lines7"></div>
+    <div class="lines lines8"></div>
+    <div class="lines lines9"></div>
+    <div class="lines lines10"></div>
+    <div class="lines lines11"></div>
+    <div class="lines lines12"></div>
+    <div class="lines lines13"></div>
+    <div class="lines lines14"></div>
+    <div class="lines lines15"></div>
+    <div class="lines lines16"></div>
+    <div class="lines lines17"></div>
+    <div class="lines lines18"></div>
+    <div class="lines lines19"></div>
+    <div class="lines lines20"></div>
+  </div>
+</body>
+</html>
