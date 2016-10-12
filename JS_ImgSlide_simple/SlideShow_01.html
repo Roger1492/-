@@ -1,0 +1,49 @@
+<!-- 最简单的自动轮播图
+time: 2016-10-12
+author: Roger Shen -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slideshow 01</title>
+	<style type="text/css">
+		.wrap > img{
+			position: absolute;
+			width: 70%;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		轮播图,自动播放
+	</div>
+	<div class="wrap">
+		<img src="http://churchofchristarticles.com/blog/wp-content/uploads/2015/10/universe-vast.jpg" alt="">
+		<img src="http://www.basicknowledge101.com/photos/2015/space/Elephant-4214115.jpg" alt="">
+		<img src="http://www.urbansamurai.com/wp-content/uploads/2016/01/center-universe.jpg" alt="">
+		<img src="https://deepuniversetruth.files.wordpress.com/2014/04/wpid-universe-wallpaper.jpg" alt="">
+		<img src="http://cdn.pcwallart.com/images/universe-hd-wallpaper-1.jpg" alt="">
+	</div>
+
+	<script type="text/javascript">
+		var Index = 0;
+		starts();
+
+		function starts(){
+			var i;
+			var imgs = document.getElementsByTagName("img");
+			for(i = 0; i < imgs.length; i++){
+			imgs[i].style.display = "none";
+		}
+		Index++;
+		if(Index > imgs.length){
+			Index = 1
+		}
+		imgs[Index-1].style.display = "block";
+		setTimeout(starts,2000);
+		}
+	</script>
+</body>
+</html>
