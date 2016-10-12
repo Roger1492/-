@@ -1,0 +1,145 @@
+<!-- 
+  Name: Clac_v1.html
+  version: 2.0
+  Authour: Roger Shen
+  Time: 2016-10-12 
+  function:在第一版的基础上加入了括号，并进行了重新布局
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    #calc_wrap{
+  position: relative;
+  width: 400px;
+  height: 500px;
+}
+#s_output{
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  background: #eee;
+  border: none;
+  outline: none;
+  font-size: 2em;
+  text-indent: 10px;
+  overflow: hidden;
+}
+#numbers{
+  width: 400px;
+  height: 450px;
+  position: absolute;
+  top: 50px;
+  background: #333;
+}
+#numbers > nav{
+  width: 96px;
+  height: 112.5px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 2em;
+  cursor: pointer;
+}
+#numbers > nav:hover{
+  background: red;
+}
+  </style>
+</head>
+<body>
+  <div id="calc_wrap">
+    <div id="s_output"></div>
+    <div id="numbers">
+      <nav id="one">1</nav>
+      <nav id="two">2</nav>
+      <nav id="three">3</nav>
+      <nav id="plus">+</nav>
+      <nav id="four">4</nav>
+      <nav id="five">5</nav>
+      <nav id="six">6</nav>
+      <nav id="minus">-</nav>
+      <nav id="seven">7</nav>
+      <nav id="eight">8</nav>
+      <nav id="nine">9</nav>
+      <nav id="times">*</nav>
+      <nav id="clear">C</nav>
+      <nav id="zero">0</nav>
+      <nav id="euqals">=</nav>
+      <nav id="division">/</nav>
+    </div>
+  </div>
+
+  <script>
+    var s_output = document.getElementById("s_output");
+    var zero = document.getElementById("zero");
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
+    var three = document.getElementById("three");
+    var four = document.getElementById("four");
+    var five = document.getElementById("five");
+    var six = document.getElementById("six");
+    var seven = document.getElementById("seven");
+    var eight = document.getElementById("eight");
+    var nine =  document.getElementById("nine");
+    var plus = document.getElementById("plus");
+    var minus = document.getElementById("minus");
+    var times = document.getElementById("times");
+    var division = document.getElementById("division");
+    var clear = document.getElementById("clear");
+
+    zero.onclick = function(){
+      s_output.innerHTML += 0;
+    };
+    one.onclick = function(){
+      s_output.innerHTML += 1;
+    }
+    two.onclick = function(){
+      s_output.innerHTML += 2;
+    }
+    three.onclick = function(){
+      s_output.innerHTML += 3;
+    }
+    four.onclick = function(){
+      s_output.innerHTML += 4;
+    }
+    five.onclick = function(){
+      s_output.innerHTML += 5;
+    }
+    six.onclick = function(){
+      s_output.innerHTML += 6;
+    }
+    seven.onclick = function(){
+      s_output.innerHTML += 7;
+    }
+    eight.onclick = function(){
+      s_output.innerHTML += 8;
+    }
+    nine.onclick = function(){
+      s_output.innerHTML += 9;
+    }
+    plus.onclick = function(){
+      s_output.innerHTML += "+";
+    }
+    minus.onclick = function(){
+      s_output.innerHTML += "-";
+    }
+    times.onclick = function(){
+      s_output.innerHTML += "*";
+    }
+    division.onclick = function(){
+      s_output.innerHTML += "/";
+    }
+    clear.onclick = function(){
+      s_output.innerHTML = null;
+    }
+    euqals.onclick = function(){
+      s_output.innerHTML = eval(s_output.innerHTML);
+    }
+
+  </script>
+</body>
+</html>
