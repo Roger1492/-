@@ -1,0 +1,98 @@
+<!-- 
+  Name: Clac_v1.html
+  version: 1.0
+  Authour: Roger Shen
+  Time: 2016-10-12 
+  function: 在原version 1.0的基础上添加括号，小数点，取余，函数等功能。
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator v2</title>
+    <style>
+    .wrap {
+        width: 500px;
+        position: relative;
+    }
+    .output{
+        width: 520px;
+        height: 50px;
+        background: #eee;
+        font-size: 2em;
+        overflow: hidden;
+    }
+    .numbers{
+        width: 520px;
+    }
+    .numbers > nav{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: #333;
+        line-height: 100px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.8em;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: all .1s;
+    }
+    .numbers > nav:hover{
+      background: #555;
+      border-radius: 5px;
+    }
+    #equals{
+        background: blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="output"></div>
+        <div class="numbers">
+            <nav id="one">1</nav>
+            <nav id="two">2</nav>
+            <nav id="three">3</nav>
+            <nav id="x3">x3</nav>
+            <nav id="plus">+</nav>
+            <nav id="four">4</nav>
+            <nav id="five">5</nav>
+            <nav id="six">6</nav>
+            <nav id="x2">x2</nav>
+            <nav id="minus">-</nav>
+            <nav id="seven">7</nav>
+            <nav id="eight">8</nav>
+            <nav id="nine">9</nav>
+            <nav id="percent">%</nav>
+            <nav id="times">*</nav>
+            <nav id="dot">.</nav>
+            <nav id="zero">0</nav>
+            <nav id="parenthesis_left">(</nav>
+            <nav id="parenthesis_right">)</nav>
+            <nav id="division">/</nav>
+            <nav id="clear">CE</nav>
+            <nav id="less_one"><=</nav>
+            <nav id="to2">to2</nav>
+            <nav id="to16">to16</nav>
+            <nav id="equals">=</nav>
+            <nav id="sin">sin</nav>
+            <nav id="cos">cos</nav>
+            <nav id="tan">tan</nav>
+            <nav id="root">root</nav>
+            <nav id="log">log</nav>
+            <nav id="asin">asin</nav>
+            <nav id="acos">acos</nav>
+            <nav id="atan">atan</nav>
+            <nav id="PI">π</nav>
+            <nav id="n_exclamatory">n!</nav>
+        </div>
+    </div>
+
+    <script src="Calc_v2.js"></script>
+</body>
+
+</html>
