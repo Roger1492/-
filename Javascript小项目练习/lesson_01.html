@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>点击文本后在input中输出点击的内容</title>
+</head>
+
+<body>
+    <div>Macbook pro</div>
+    <div>Macbook air</div>
+    <div>Macbook</div>
+    <div>iPhone</div>
+    <div>iPad</div>
+    <div>iTnues</div>
+    <div>iMac</div>
+    <div>Mac Pro</div>
+    <div>iWatch</div>
+    <div>Javascript</div>
+    <input type="text" value="f">
+    <script>
+	    window.onload = function(){
+	    	var oDiv = document.getElementsByTagName("div");
+	    	var oInput = document.getElementsByTagName("input")[0];
+
+	    	for(var i = 0; i < oDiv.length; i++){
+	    		oDiv[i].onclick = function(){
+	    			oInput.value = this.innerHTML;
+	    		};
+	    	}
+	    };
+    </script>
+</body>
+
+</html>
