@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移入移除改变样式</title>
+	<style>
+		#wrap{
+			width: 400px;
+			height: 400px;
+			background: lightblue;
+			box-sizing: border-box;
+			line-height: 350px;
+			border-radius: 50%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- 鼠标移入移除改变div元素的样式 -->
+	</div>
+
+	<script>
+		var wrap = document.getElementById("wrap");
+		wrap.onmouseover = function(){
+			this.style.border = "200px solid gray";
+			this.style.transition = "all 0.6s ease-in-out";
+		};
+		wrap.onmouseout = function(){
+			this.style.border = "0 solid lightblue";
+			this.style.transition = "all 0.6s ease-in-out";
+		};
+	</script>
+</body>
+</html>

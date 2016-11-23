@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>点击div后显示innerHTML</title>
+    <style>
+    	div{
+    		width: 500px;
+    		margin: 20px;
+    		cursor: pointer;
+    		border: 1px solid gray;
+    		border-radius: 20px;
+    		text-align: center;
+    		padding: 10px 30px;
+    	}
+    	nav{
+    		position: relative;
+    		transform: translate(600px, -300px);
+    		width: 500px;
+    		height: 80px;
+    		margin: 20px;
+    		border: 1px solid gray;
+    		border-radius:  20px;
+    		text-align: center;
+    		padding: 10px 30px;
+    		background: lightblue;
+    	}
+    </style>
+</head>
+
+<body>
+    <div>
+    	把鼠标放入div后，div中的内容会显示在右边的框中。
+        111111111111111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quam, porro qui explicabo laborum quod adipisci vel doloremque, illo commodi?
+    </div>
+    <div>
+        222222222222222222Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos numquam, architecto reprehenderit velit, repellat in sed deserunt earum vo luptas explicabo?
+    </div>
+    <div>
+       3 3333333333333333333Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil expedita molestiae voluptas iste numquam excepturi, quo omnis odio volu ptatem pariatur?
+    </div>
+    <div>
+        44444444444444444444444Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit vel ea, dolore. Obcaecati non commodi fugiat minus impedit nesciunt.
+    </div>
+    <div>
+        55555555555555555555555555555555555Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse vel ullam architecto perferendis optio accusantium dolorem amet quibusdam ipsa !
+    </div>
+	
+	<nav>
+		
+	</nav>
+    <script>
+    	var oDiv = document.getElementsByTagName("div");
+    	var oNav = document.getElementsByTagName("nav")[0];
+    	for(var i = 0; i < oDiv.length; i++){
+    		oDiv[i].addEventListener("mouseover", function(){
+    			oNav.innerHTML = this.innerHTML;
+    		});
+    	}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对任意长度的数组求和</title>
+</head>
+<body>
+	<input type="text" value=""> 请输入任意长度的数组，形如`[1,2,3,4,5,6]`<br>
+	<button>求和</button>
+	<p></p>
+
+	<script>
+		var obtn = document.getElementsByTagName("button")[0];
+		var oinput = document.getElementsByTagName("input")[0].value;
+		var op = document.getElementsByTagName("p")[0];
+
+		obtn.onclick = function(){
+			var sum;
+			for(var i in oinput){
+				sum += parseFloat(oinput[i]);
+			}
+			op.innerHTML = sum;
+		};
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
