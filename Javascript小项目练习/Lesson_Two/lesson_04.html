@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>传入属性和值后改变</title>
+    <style>
+    .wrap {
+        width: 400px;
+        border: 1px solid red;
+       	margin: 100px auto;
+    }
+    button{
+    	text-align: center;
+    }
+    
+    #showHere {
+        width: 200px;
+        height: 200px;
+        background: black;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>Attribute Name: <input id="AttrName" type="text" placeholder="属性名"></div>
+        <div>Attribute Value: <input id="AttrValue" type="text" placeholder="属性值"></div>
+        <button id="btnOk">OK</button>
+        <button id="btnReset">reset</button><br>
+        <nav id="showHere">在上面输入属性名和属性值后，点击OK改变这里的属性。</nav>
+    </div>
+    <script>
+    function changeStyle(elem, name, value) {
+        elem.style[name] = value;
+    }
+
+    window.onload = function() {
+        var AttrName = document.getElementById('AttrName');
+        var AttrValue = document.getElementById('AttrValue');
+        var btnOk = document.getElementById('btnOk');
+        var btnReset = document.getElementById('btnReset');
+        var showHere = document.getElementById('showHere');
+
+        btnOk.onclick = function() {
+            changeStyle(showHere, AttrName.value, AttrValue.value);
+            // showHere.style.AttrName = "AttrValue";
+        };
+        btnReset.onclick = function(){
+        	showHere.removeAttribute("style");
+        };
+    };
+    </script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>

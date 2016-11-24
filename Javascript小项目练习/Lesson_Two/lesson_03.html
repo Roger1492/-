@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出层效果</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		button{
+			position: relative;
+			left: 50%;
+			top: 200px;
+			float: left;
+		}
+		div{
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			background: gray;
+			display: none;
+		}
+		.context{
+			width: 400px;
+			height: 100px;
+			border: 1px solid red;
+			padding: 40px;
+			position: relative;
+			left: 300px;
+			top: 300px;
+		}
+		.close{
+			width: 20px;
+			height: 20px;
+			background: red;
+			position: relative;
+			text-align: center;
+			line-height: 20px;
+			left: 750px;
+			top: 130px;
+			box-shadow: 0 0 0 3px blue, 0 0 0  5px green;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<button>弹出层</button>
+	<div>
+		<nav class="context">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam at animi, a eligendi nemo modi, mollitia eos possimus incidunt esse, voluptas omnis quia optio, voluptatibus sequi error. Optio, quos nam.</nav>
+		<nav class="close">X</nav>
+	</div>
+
+	<script>
+		var btn = document.getElementsByTagName("button")[0];
+		var div = document.getElementsByTagName("div")[0];
+		var close = document.getElementsByClassName("close")[0];
+
+		btn.onclick = function(){
+			div.style.display = "block";
+		};
+
+		close.addEventListener("click", function(){
+			div.style.display = "none";
+		});
+	</script>
+</body>
+</html>
