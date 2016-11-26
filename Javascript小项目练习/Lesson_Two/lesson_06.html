@@ -122,29 +122,13 @@
         </div>
     </div>
     <script>
-    // var tab1 = document.getElementsByTagName("nav")[0];
-    // var tab2 = document.getElementsByTagName("nav")[1];
-    // var tab3 = document.getElementsByTagName("nav")[2];
-    // var tab4 = document.getElementsByTagName("nav")[3];
-    // var tab5 = document.getElementsByTagName("nav")[4];
-
-    // var ul1 = document.getElementsByTagName("ul")[0];
-    // var ul2 = document.getElementsByTagName("ul")[1];
-    // var ul3 = document.getElementsByTagName("ul")[2];
-    // var ul4 = document.getElementsByTagName("ul")[3];
-    // var ul5 = document.getElementsByTagName("ul")[4];
-
-    // tab1.onclick = function(){
-
-    // };
-
     window.onload = function() {
         var tabs = document.getElementsByTagName("nav");
         var uls = document.getElementsByTagName("ul");
 
         for (var i = 0; i < tabs.length; i++) {
         	tabs[i].index = i;
-            tabs[i].onclick = function(){
+            tabs[i].onmouseover = function(){
             	for(var i = 0; i < uls.length; i++){
             		uls[i].style.display = "none";
             		uls[this.index].style.display = "block";
