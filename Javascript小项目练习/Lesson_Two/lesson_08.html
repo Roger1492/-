@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音乐播放器的播放列表与列表切换</title>
+	<style>
+		.wrap{
+			margin: 50px auto;
+			width: 400px;
+			border: 1px solid black;
+		}
+		.wrap > div{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			background: lightblue;
+			cursor: pointer;
+			font-size: 1.3em;
+			text-indent: 40px;
+			transition: all .2s;
+		}
+		.wrap > div:hover{
+			background: #91D1E6;
+			text-indent: 50px;
+			color: #3E3838;
+		}
+		.wrap > ul:nth-of-type(2),
+		.wrap > ul:nth-of-type(3),
+		.wrap > ul:nth-of-type(4){
+			display: none;
+		}
+		.wrap ul li{
+			list-style-type: none;
+		}
+		.wrap ul li a{
+			color: black;
+			text-decoration: none;
+			font-size: .8em;
+			display: inline-block;
+			transition: all .2s;
+		}
+		.wrap ul li a:hover{
+			text-indent: 10px;
+			color: #372D2D;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div>播放列表1...</div>
+		<ul>
+			<li><a href="#">王菲 - 匆匆那年</a></li>
+			<li><a href="#">王菲 - 红豆</a></li>
+			<li><a href="#">朴树 - 白桦林</a></li>
+			<li><a href="#">张韶涵 - 隐形的翅膀</a></li>
+			<li><a href="#">卢冠廷 - 一生所爱</a></li>
+			<li><a href="#">周传雄 - 黄昏</a></li>
+			<li><a href="#">周杰伦 - 好久不见</a></li>
+			<li><a href="#">周杰伦 - 晴天</a></li>
+			<li><a href="#">周杰伦 - 青花瓷</a></li>
+			<li><a href="#">许巍 - 蓝莲花</a></li>
+			<li><a href="#">黑撒乐队 - 流川枫与苍井空</a></li>
+			<li><a href="#">许嵩 - 清明雨上</a></li>
+			<li><a href="#">顾莉雅- 舍不得他</a></li>
+		</ul>
+
+		<div>播放列表2...</div>
+		<ul>
+			<li><a href="#">任贤齐 - 老地方</a></li>
+			<li><a href="#">任贤齐 - 天涯</a></li>
+			<li><a href="#">李荣浩 - 老街</a></li>
+			<li><a href="#">周深 - 大鱼</a></li>
+			<li><a href="#">邓紫棋 - 喜欢你</a></li>
+			<li><a href="#">周杰伦 - 夜曲</a></li>
+			<li><a href="#">周杰伦 - 安静</a></li>
+			<li><a href="#">周杰伦 - 千里之外</a></li>
+			<li><a href="#">周杰伦 - 东风破</a></li>
+			<li><a href="#">周杰伦 - 发如雪</a></li>
+			<li><a href="#">周杰伦 - 上海一九四三</a></li>
+			<li><a href="#">周杰伦 - 不能说的秘密</a></li>
+			<li><a href="#">陈奕迅 - 明年今日</a></li>
+			<li><a href="#">陈奕迅 - 浮夸</a></li>
+			<li><a href="#">陈奕迅 - 富士山下</a></li>
+			<li><a href="#">张惠妹 - 我最亲爱的</a></li>
+			<li><a id="cl" href="#">李代沫 - 我最亲爱的</a><audio src="F:\CloudMusic\李代沫 - 我最亲爱的.mp3"></audio></li>
+			<li><a href="#">久石让 - 天空之城</a></li>
+			<li><a href="#">群星 - 寂静之声</a></li>
+			<li><a href="#">冯曦妤 - 再见 - 警察</a></li>
+			<li><a href="#">冯曦妤 - 我在那一角落患过伤风</a></li>
+			<li><a href="#">陈悦 - 乱红</a></li>
+			<li><a href="#">Playboy - 安静的午后</a></li>
+		</ul>
+
+		<div>播放列表3...</div>
+		<ul>
+			<li><a href="#">Trademark - Only love</a></li>
+			<li><a href="#">Adele - Hello</a></li>
+			<li><a href="#">Celine Dion - My heart will go on</a></li>
+			<li><a href="#">Justin Tiimberlate - Five Hundred Miles</a></li>
+			<li><a href="#">John Denver - Take me home country roads</a></li>
+			<li><a href="#">Ed Sheeran - I see fire</a></li>
+			<li><a href="#">Scorpions - Send my an angel</a></li>
+			<li><a href="#">Declan Galbraith - Tell my why</a></li>
+			<li><a href="#">Britney Spears - Baby one more time</a></li>
+			<li><a href="#">Altan - Daily Grawing</a></li>
+			<li><a href="#">Richard Marx - Right here waiting</a></li>
+			<li><a href="#">Madonna - Don't cry for me argentina</a></li>
+			<li><a href="#">Westlift - If i let you go</a></li>
+			<li><a href="#">Maria Arredondo - Burinning</a></li>
+			<li><a href="#">Jewel - Satisfied</a></li>
+			<li><a href="#">Westlife - My love</a></li>
+			<li><a href="#">Westlift - Seasons in the sun</a></li>
+			<li><a href="#">Westlife - You raise my up</a></li>
+			<li><a href="#">Westlift - Rose</a></li>
+			<li><a href="#">Michael Jackson - You are not alone</a></li>
+			<li><a href="#">Michael Jackson - Beat it</a></li>
+			<li><a href="#">Michael Jackson - We are the world</a></li>
+			<li><a href="#">Michael Jackson - Thriller</a></li>
+			<li><a href="#">Michael Jackson - Heal the world</a></li>
+			<li><a href="#">Michael Jackson - Dangerous</a></li>
+		</ul>
+
+		<div>播放列表3...</div>
+		<ul>
+			<li><a href="#">Vangelis - Conquest of paradise</a></li>
+			<li><a href="#">Hans Zimmer - now we are free</a></li>
+			<li><a href="#">Two Steps From Hell - Victory</a></li>
+			<li><a href="#">Tow Steps From Hell - Heart of courage - Original</a></li>
+			<li><a href="#">Two Steps From Hell - Star Sky</a></li>
+			<li><a href="#">Two Steps From Hell - El Dorado Dubstep</a></li>
+			<li><a href="#">Two Steps From Hell - For the win</a></li>
+			<li><a href="#">Two Steps From Hell - Dragon riader</a></li>
+			<li><a href="#">Thomas Bergersen - Empire of angels</a></li>
+			<li><a href="#">Dreamtale - The Dawn</a></li>
+			<li><a href="#">Bandari - Snowdream</a></li>
+			<li><a href="#">Bandari - Childhood memory</a></li>
+			<li><a href="#">Bandari - The sounds of silence</a></li>
+			<li><a href="#">Bandari - Endless horizon</a></li>
+			<li><a href="#">Bandari - Annie's wonderland</a></li>
+			<li><a href="#">Bandari - Moonglow</a></li>
+			<li><a href="#">Bandari - Star of Baghdad</a></li>
+			<li><a href="#">Bandari - The dream catcher</a></li>
+			<li><a href="#">Dan Gibson - Nature's path</a></li>
+			<li><a href="#">Dan Gibson - Cool Forest rain</a></li>
+			<li><a href="#">Phil Coulter - Spancil Hill</a></li>
+			<li><a href="#">Groove Coverage - Monnlight shadow</a></li>
+			<li><a href="#">Groove Coverage - God is a girl</a></li>
+			<li><a href="#">Sarah Brightman - Scarborought Fair</a></li>
+			<li><a href="#">M2M - The Day You Went Away</a></li>
+			<li><a href="#">Lene Marlin - A place nearby</a></li>
+			
+		</ul>
+	</div>
+
+	<script>
+		window.onload = function(){
+			var oDiv =document.getElementsByClassName("wrap")[0].getElementsByTagName("div");
+			var oUl =document.getElementsByClassName("wrap")[0].getElementsByTagName("ul");
+			// var musicList = document.getElementsByClassName("wrap")[0].getElementsByTagName("ul").getElementsByTagName("li").getElementsByTagName("a");
+			// var musisPlay = document.getElementsByClassName("wrap")[0].getElementsByTagName("ul").getElementsByTagName("ll").getElementsByTagName("audio");
+
+			for(var i = 0; i < oDiv.length; i++){
+				oDiv[i].index = i;
+				oDiv[i].onclick = function(){
+					for(var j = 0; j < oUl.length; j++){
+						oUl[j].style.display = "none";
+						oUl[this.index].style.display = "block";
+					}
+				};
+			}
+
+			// for(var n = 0; n < musicList.length; n++){
+			// 	musicList[n].index = i;
+			// 	musicList[n].onclick = function(){
+			// 		for(var m = 0; m < musisPlay.length; m++){
+			// 			musisPlay[i].play();
+			// 		}
+			// 	};
+			// }
+		};
+	</script>
+</body>
+</html>

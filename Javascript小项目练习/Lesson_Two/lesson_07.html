@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简单Javascript日历</title>
+    <style>
+    .wrap {
+        width: 285px;
+        height: 330px;
+        border: 1px solid gray;
+        background: gray;
+    }
+    
+    .wrap > nav {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 1.6em;
+        display: inline-block;
+        background: lightblue;
+        margin-left: 6px;
+        margin-top: 5px;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    /* .wrap > nav:nth-of-type(6) {
+        background: blue;
+    } */
+
+    .wrap > nav:hover{
+    	background: blue;
+    }
+    
+    .wrap > div {
+        width: 95%;
+        height: 32%;
+        margin-left: 6px;
+        margin-top: 13px;
+        background: lightblue;
+    }
+    #context > div:nth-of-type(2),
+    #context > div:nth-of-type(3),
+    #context > div:nth-of-type(4),
+    #context > div:nth-of-type(5),
+    #context > div:nth-of-type(6),
+    #context > div:nth-of-type(7),
+    #context > div:nth-of-type(8),
+    #context > div:nth-of-type(9),
+    #context > div:nth-of-type(10),
+    #context > div:nth-of-type(11),
+    #context > div:nth-of-type(12) {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>1</nav>
+        <nav>2</nav>
+        <nav>3</nav>
+        <nav>4</nav>
+        <nav>5</nav>
+        <nav>6</nav>
+        <nav>7</nav>
+        <nav>8</nav>
+        <nav>9</nav>
+        <nav>10</nav>
+        <nav>11</nav>
+        <nav>12</nav>
+        <div id="context">
+            <div>
+            	<h3>一月节日</h3>
+				<em>元旦：1月1日至3日放假三天</em>
+            </div>
+            <div>
+            	<h3>二月</h3>
+            	<em>春节：2月2日至8日放假7天</em>
+            </div>
+            <div>
+            	<h3>三月</h3>
+            	<em>妇女节：3月8日妇女节</em>
+            </div>
+            <div>
+            	<h3>四月</h3>
+            	<em>清明节：4月3日至5日放假3天</em>
+            </div>
+            <div>
+            	<h3>五月</h3>
+            	<em>劳动节：4月30日至5月2日放假3天。</em>
+            </div>
+            <div>
+            	<h3>六月</h3>
+            	<em>端午节：6月4日至6日放假三天</em>
+            </div>
+            <div>
+            	<h3>七月</h3>
+            	<em>小暑：7月7日小暑</em>
+            </div>
+            <div>
+            	<h3>八月</h3>
+            	<em>七夕节：8月6日七夕节。不放假。</em>
+            </div>
+            <div>
+				<h3>九月</h3>
+				<em>中秋节：9月10日至12日放假3天。</em>
+            </div>
+            <div>
+            	<h3>十月</h3>
+            	<em>国庆节：10月1日至7日放假7天。</em>
+            </div>
+            <div>
+            	<h3>十一月</h3>
+            	<em>立冬：11月8日立冬。不放假。</em>
+            </div>
+            <div>
+            	<h3>十二月</h3>
+            	<em>艾滋病日:12月1日</em>
+            </div>
+        </div>
+    </div>
+    <script>
+	    window.onload = function() {
+	        var oNav = document.getElementsByTagName("nav");
+	        var oContext = document.getElementById("context").getElementsByTagName("div");
+
+	        for (var i = 0; i < oNav.length; i++) {
+	            oNav[i].index = i;
+	            oNav[i].onmouseover = function() {
+	                for(var j = 0; j < oContext.length; j++){
+	                	oContext[j].style.display = "none";
+	                	oContext[this.index].style.display = "block";
+	                }
+	            };
+	        }
+	    };
+    </script>
+</body>
+
+</html>
