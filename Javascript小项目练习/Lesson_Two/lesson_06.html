@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简单tab选项卡</title>
+    <style>
+    .wrap {
+        width: 40vw;
+        border: 1px solid black;
+        position: relative;
+    }
+    
+    .tabs {
+        width: 100%;
+        height: 8%;
+        background: pink;
+    }
+    
+    .tabs > nav {
+        display: inline-block;
+        width: 19.3%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.3em;
+    }
+    
+    .tabs > nav:hover {
+        background: lightblue;
+        color: white;
+    }
+    
+    .context ul li {
+        list-style-type: none;
+    }
+    
+    .context ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .context > ul:nth-of-type(2),
+    .context > ul:nth-of-type(3),
+    .context > ul:nth-of-type(4),
+    .context > ul:nth-of-type(5) {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="tabs">
+            <nav>Home</nav>
+            <nav>JavaScript</nav>
+            <nav>HTML5</nav>
+            <nav>CSS3</nav>
+            <nav>About</nav>
+        </div>
+        <div class="context">
+            <ul>
+                <li><a href="#">1. Home one</a></li>
+                <li><a href="#">2. Home two</a></li>
+                <li><a href="#">3. Home three</a></li>
+                <li><a href="#">4. Home four</a></li>
+                <li><a href="#">5. Home five</a></li>
+                <li><a href="#">6. Home six</a></li>
+                <li><a href="#">7. Home seven</a></li>
+                <li><a href="#">8. Home eight</a></li>
+                <li><a href="#">9. Home nine</a></li>
+                <li><a href="#">10. Home ten</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">1. Javascript简介</a></li>
+                <li><a href="#">2. Javascript语言历史</a></li>
+                <li><a href="#">3. Javascript基础</a></li>
+                <li><a href="#">4. Javascript变量</a></li>
+                <li><a href="#">5. Javascript语句</a></li>
+                <li><a href="#">6. Javascript函数</a></li>
+                <li><a href="#">7. Javascript原型</a></li>
+                <li><a href="#">8. Javascript闭包</a></li>
+                <li><a href="#">9. Javascript继承</a></li>
+                <li><a href="#">10. Javascript项目</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">1. HTML简介</a></li>
+                <li><a href="#">2. HTML基础</a></li>
+                <li><a href="#">3. HTML元素</a></li>
+                <li><a href="#">4. HTML属性</a></li>
+                <li><a href="#">5. HTML标题</a></li>
+                <li><a href="#">6. HTML段落</a></li>
+                <li><a href="#">7. HTML连接</a></li>
+                <li><a href="#">8. HTML图像</a></li>
+                <li><a href="#">9. HTML表格</a></li>
+                <li><a href="#">10. HTML图像</a></li>
+                <li><a href="#">11. HTML列表</a></li>
+                <li><a href="#">12. HTML区块</a></li>
+                <li><a href="#">13. HTML表单</a></li>
+                <li><a href="#">14. HTML布局</a></li>
+                <li><a href="#">15. HTML框架</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">1. CSS简介</a></li>
+                <li><a href="#">2. CSS语法</a></li>
+                <li><a href="#">3. CSS创建</a></li>
+                <li><a href="#">4. CSS背景</a></li>
+                <li><a href="#">5. CSS颜色</a></li>
+                <li><a href="#">6. CSS链接</a></li>
+                <li><a href="#">7. CSS文本</a></li>
+                <li><a href="#">8. CSS字体</a></li>
+                <li><a href="#">9. CSS表格</a></li>
+                <li><a href="#">10. CSS盒子模型</a></li>
+                <li><a href="#">11. CSS边框</a></li>
+                <li><a href="#">12. CSS定位</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">1. About one</a></li>
+                <li><a href="#">2. About two</a></li>
+                <li><a href="#">3. About three</a></li>
+                <li><a href="#">4. About four</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    // var tab1 = document.getElementsByTagName("nav")[0];
+    // var tab2 = document.getElementsByTagName("nav")[1];
+    // var tab3 = document.getElementsByTagName("nav")[2];
+    // var tab4 = document.getElementsByTagName("nav")[3];
+    // var tab5 = document.getElementsByTagName("nav")[4];
+
+    // var ul1 = document.getElementsByTagName("ul")[0];
+    // var ul2 = document.getElementsByTagName("ul")[1];
+    // var ul3 = document.getElementsByTagName("ul")[2];
+    // var ul4 = document.getElementsByTagName("ul")[3];
+    // var ul5 = document.getElementsByTagName("ul")[4];
+
+    // tab1.onclick = function(){
+
+    // };
+
+    window.onload = function() {
+        var tabs = document.getElementsByTagName("nav");
+        var uls = document.getElementsByTagName("ul");
+
+        for (var i = 0; i < tabs.length; i++) {
+        	tabs[i].index = i;
+            tabs[i].onclick = function(){
+            	for(var i = 0; i < uls.length; i++){
+            		uls[i].style.display = "none";
+            		uls[this.index].style.display = "block";
+            	}
+            };
+        }
+    };
+    </script>
+</body>
+
+</html>

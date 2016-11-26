@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移入移除改变图片的透明度并放大</title>
+	<style>
+		.wrap{
+			width: 81.1vw;
+			height: 61vh;
+			border: 1px solid black;
+			padding: 10px;
+			margin: 50px auto;
+		}
+		.wrap > div{
+			width: 20vw;
+			height: 20vh;
+			display: inline-block;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.wrap > div > img{
+			width: 100%;
+			height: 100%;
+			opacity: .8;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div><img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1209/14/c2/13855364_1347613545561.jpg" alt=""></div>
+		<div><img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1209/10/c1/13758581_1347257278695.jpg" alt=""></div>
+		<div><img src="http://image.tianjimedia.com/uploadImages/2013/284/F879R8LSSQ28.jpg" alt=""></div>
+		<div><img src="http://t10.baidu.com/it/u=4050092796,670345660&fm=32&img.jpg" alt=""></div>
+		<div><img src="http://t11.baidu.com/it/u=3945048970,458038564&fm=32&img.jpg" alt=""></div>
+		<div><img src="http://img3.iqilu.com/data/attachment/forum/201308/21/181941h1lk81rl17txvx7x.jpg" alt=""></div>
+		<div><img src="http://pic1.win4000.com/wallpaper/7/5600bcc46d3de.jpg" alt=""></div>
+		<div><img src="http://www.pp3.cn/uploads/201604/20160427014.jpg" alt=""></div>
+		<div><img src="http://4493bz.1985t.com/uploads/allimg/140919/3-140919103119.jpg" alt=""></div>
+		<div><img src="http://pic1.win4000.com/wallpaper/c/56d8e47550b86.jpg" alt=""></div>
+		<div><img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1209/14/c2/13855364_1347613545562.jpg" alt=""></div>
+		<div><img src="http://www.bz55.com/uploads/allimg/150721/139-150H1105955.jpg" alt=""></div>
+	</div>
+
+	<script>
+		window.onload = function(){
+			var oImg = document.getElementsByTagName("img");
+			for(var i = 0; i < oImg.length; i++){
+				oImg[i].onmouseover = function(){
+					this.style.opacity = "1";
+					this.style.transition = "all .1s ease-in-out";
+					this.style.transform = "scale(1.2, 1.2)";
+				};
+				oImg[i].onmouseout = function(){
+					this.style.opacity = "0.8";
+					this.style.transition = "all .1s ease-in-out";
+					this.style.transform = "scale(1, 1)";
+				};
+			}
+		};
+	</script>
+</body>
+</html>
