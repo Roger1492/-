@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选，全不选，反选</title>
+	<style>
+		.wrap{
+			width: 20vw;
+		}
+		#antiCheckWord{
+			cursor: pointer;
+			font-size: .8em;
+			margin: 0 20px;
+			color: #42B5DA;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="checks">
+			<input id="allCheck" type="checkbox"><span id="allCheckWord">全选</span><span id="antiCheckWord">反选</span>
+			<hr>
+			<input class="Acheck" type="checkbox"> Option one <br>
+			<input class="Acheck" type="checkbox"> Option two <br>
+			<input class="Acheck" type="checkbox"> Option three <br>
+			<input class="Acheck" type="checkbox"> Option four <br>
+			<input class="Acheck" type="checkbox"> Option five <br>
+			<input class="Acheck" type="checkbox"> Option six <br>
+			<input class="Acheck" type="checkbox"> Option seven <br>
+			<input class="Acheck" type="checkbox"> Option eight <br>
+			<input class="Acheck" type="checkbox"> Option nine <br>
+			<input class="Acheck" type="checkbox"> Option ten <br>
+			<input class="Acheck" type="checkbox"> Option eleven <br>
+		</div>
+	</div>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script>
+		window.onload = function(){
+			var allCheck = document.getElementById("allCheck");
+			var allCheckWord = document.getElementById("allCheckWord");
+			var antiCheckWord = document.getElementById("antiCheckWord");
+			var Acheck = document.getElementsByClassName("Acheck");
+
+			allCheck.onclick = function(){
+				allCheckWord.innerHTML = "全不选";
+				for(var i = 0; i < Acheck.length; i++){
+					Acheck[i].addAttribute;
+				}
+			};
+		};
+	</script>
+</body>
+</html>

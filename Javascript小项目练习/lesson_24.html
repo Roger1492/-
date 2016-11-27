@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>当前输入框高亮提示</title>
+	<style>
+		.wrap{
+			margin: 30px auto;
+			width: 300px;
+			border: 2px solid blue;
+			background: lightblue;
+		}
+		p{
+			width: 300px;
+			height:30px;
+			line-height: 30px;
+			position: relative;
+			top: -16px;
+			text-indent: 20px;
+			border-bottom: 2px solid blue;
+		}
+		.content > label{
+			display: inline-block;
+			text-indent: 20px;
+		}
+		.content > label > input{
+			background: lightblue;
+			outline: none;
+			border: none;
+		}
+/* 		.content > label > input:focus{
+			border: 1px solid ;
+		} */
+
+		button{
+			position: relative;
+			left: 80px;
+			margin: 10px;
+			border: none;
+			outline: none;
+			font-size: 1.5em;
+			border-radius: 5px;
+			padding: 2px 15px;
+			background: #0C80B0;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<p>用户登录</p>
+		<div class="content">
+			<label for="uName">用户名: <input id="uName" type="text"></label> <br>
+			<label for="uPasswd">密码: <input id="uPasswd" type="password"></label>
+		</div>
+		<button>Log in</button>
+	</div>
+
+	<script>
+		window.onload = function(){
+			var oInput  = document.getElementsByTagName("input");
+			for(var i = 0; i < oInput.length; i++){
+				oInput[i].onfocus = function(){
+					this.style.border = "1px solid blue";
+				};
+				oInput[i].onblur = function(){
+					this.style.border = "none";
+				};
+			}
+		};
+
+	</script>
+</body>
+</html>

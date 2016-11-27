@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>比较最大值</title>
+	<style>
+		p{
+			display: inline-block;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	vs
+	<input type="text">
+	<button>Biggest number is</button>
+	<p>?</p>
+
+	<script>
+		var firstNumber = document.getElementsByTagName("input")[0];
+		var secondNumber = document.getElementsByTagName("input")[1];
+		var btn = document.getElementsByTagName("button")[0];
+		var result = document.getElementsByTagName("p")[0];
+
+		btn.addEventListener("click", function(){
+			result.innerHTML = parseFloat(firstNumber.value) > parseFloat(secondNumber.value) ? parseFloat(firstNumber.value) : parseFloat(secondNumber.value);
+		});
+	</script>
+</body>
+</html>

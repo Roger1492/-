@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面加载后自动累加1</title>
+</head>
+<body>
+	<p></p>
+
+	<script>
+		window.onload = function(){
+			var eP = document.getElementsByTagName("p")[0];
+			setInterval(frame, 1000);
+
+			var i = 0;   //全局变量才可以用于累加
+			function frame(){
+				eP.innerHTML = ++i;
+			};
+		};
+	</script>
+</body>
+</html>

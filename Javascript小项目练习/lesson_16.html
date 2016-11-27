@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>parseFloat求和</title>
+    <style>
+    p {
+        display: inline-block;
+        margin: 0 15px;
+        color: #1055F1;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="text"> +
+    <input type="text">
+    <p>?</p>
+    <button>Add</button>
+    <script>
+	    window.onload = function() {
+	        var firstNumber = document.getElementsByTagName("input")[0];
+	        var secondNumber = document.getElementsByTagName("input")[1];
+	        var result = document.getElementsByTagName("p")[0];
+	        var btn = document.getElementsByTagName("button")[0];
+
+	        btn.onclick = function() {
+	            result.innerHTML = parseFloat(firstNumber.value) + parseFloat(secondNumber.value);
+	        };
+	    };
+    </script>
+</body>
+
+</html>

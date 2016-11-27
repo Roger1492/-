@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取按键的键名和keyCode</title>
+</head>
+<body>
+	<p>获取按键的键名和keyCode</p>
+	<span></span>
+	<span></span>
+
+	<script>
+		window.onload = function(){
+			var eSpan1 = document.getElementsByTagName("span")[0];
+			var eSpan2 = document.getElementsByTagName("span")[1];
+			document.onkeydown = function(event){
+				var e = event || window.event;
+				eSpan1.innerHTML = String.fromCharCode(e.keyCode);
+				eSpan2.innerHTML = e.keyCode;
+			};
+		};
+	</script>
+</body>
+</html>

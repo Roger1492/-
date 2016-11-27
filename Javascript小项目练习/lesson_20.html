@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试数字的位数或字符串的长度</title>
+</head>
+<body>
+	<input type="text">
+	<button>几位?</button>
+
+	<script>
+		var oInput = document.getElementsByTagName("input")[0];
+		var oBtn = document.getElementsByTagName("button")[0];
+		oBtn.onclick = function(){
+			this.innerHTML ="共有"+ oInput.value.toString().length + "位数";
+		};
+
+	</script>
+</body>
+</html>

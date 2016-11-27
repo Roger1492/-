@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阻止右键菜单,防止复制</title>
+</head>
+<body>
+	<p>阻止右键菜单</p>
+	<p>防止复制</p>
+
+	<script>
+		window.onload = function(){
+			document.oncontextmenu = function(){
+				return false;
+			};
+			document.oncopy = function(){
+				return false;
+			};
+			document.oncut = function(){
+				return false;
+			};
+		};
+	</script>
+</body>
+</html>

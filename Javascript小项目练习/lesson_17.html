@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>累加数字1</title>
+	<style>
+		button{
+			display: block;
+			margin: 30px auto;
+			width: 100px;
+			height: 30px;
+			font-size: 1.4em;
+		}
+	</style>
+</head>
+<body>
+	<button>0</button>
+
+	<script>
+		var btn = document.getElementsByTagName("button")[0];
+		var i = 0;
+		btn.onclick = function(){
+			this.value = ++i;
+			this.innerHTML = this.value;
+		};
+	</script>
+</body>
+</html>

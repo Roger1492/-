@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简易时钟</title>
+    <style>
+    .wrap {
+        width: 200px;
+        height: 50px;
+        background: gray;
+        position: relative;
+        line-height: 50px;
+        text-align: center;
+    }
+    
+    p {
+        display: inline-block;
+        margin: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <p></p>
+        点
+        <p></p>
+        分
+        <p></p>
+        秒
+    </div>
+    <script>
+
+    setInterval(run, 1000);
+
+    function run() {
+
+        var hours = document.getElementsByTagName("p")[0];
+        var minutes = document.getElementsByTagName("p")[1];
+        var seconds = document.getElementsByTagName("p")[2];
+
+        var time = new Date();
+        var h = time.getHours();
+        var m = time.getMinutes();
+        var s = time.getSeconds();
+
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+    }
+
+    </script>
+</body>
+
+</html>
