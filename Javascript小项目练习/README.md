@@ -26,3 +26,8 @@
 25. 点击窗口中的任意位置获取坐标
 26. 获取按键的键名和keyCode
 27. 阻止右键菜单,防止复制
+28. JS实现简单拖拽效果
+29. 测试clientX,clientY,offsetLeft,offsetTop,pageX,pageY
+30. JS实现简单拖拽效果(封装对象方法)
+31. 简易留言板 v1.0
+32. 简易留言板 v2.0

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS实现简单拖拽效果</title>
+	<style>
+		.demo{
+			width: 100px;
+			height: 100px;
+			position: relative;
+			background: lightgreen;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">你可以拖拽我</div>
+
+	<script>
+		window.onload = function(){
+			var demo = document.getElementsByClassName("demo")[0];
+			demo.onmousedown = function(event){
+				var oEvent = event || window.event;
+				var distanceX = oEvent.clientX - demo.offsetLeft;
+				var dsitanceY = oEvent.clientY - demo.offsetTop;
+
+				document.onmousemove = function(event){
+					var oEvent = event || window.event;
+					var left = oEvent.clientX - distanceX;
+					var top = oEvent.clientY -  dsitanceY;
+
+					if (left <= 0) {
+						left = 0;
+					} else if (left >= document.documentElement.clientWidth - demo.offsetWidth) {
+						left = document.documentElement.clientWidth - demo.offsetWidth;
+					}
+
+					if (top <= 0) {
+						top = 0;
+					} else if (top >= document.documentElement.clientHeight - demo.offsetHeight) {
+						top = document.documentElement.clientHeight - demo.offsetHeight;
+					}
+
+					demo.style.top = top + "px";
+					demo.style.left = left + "px";
+				}
+
+				demo.onmouseup = function(){
+					document.onmousemove = null;
+					demo.onmouseup = null;
+				};
+			};
+		};
+	</script>
+</body>
+</html>

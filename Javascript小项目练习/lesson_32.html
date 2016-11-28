@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易留言板 V2.0</title>
+	<style>
+		.outer{
+			margin-top: 20px;
+			width: 300px;
+			border: 1px solid black;
+		}
+		.outer > div{
+			background: lightgreen;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="enter">
+			<textarea name="" id="ta" cols="30" rows="5"></textarea>
+			<input id="btn" type="button" value="发表">
+		</div>
+		<div class="outer">
+			<div>Lorem ipsum.</div>
+			<div>Lorem ipsum dolor.</div>
+			<div>Lorem ipsum dolor sit.</div>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function(){
+			var btn = document.getElementById("btn");
+			btn.onclick = function(){
+				var ta = document.getElementById("ta");
+				var createDiv = document.createElement("div");
+				var outer = document.getElementsByClassName("outer")[0];
+
+				var outers = outer.getElementsByTagName("div")[0];    //1 在元素前面添加
+				outer.insertBefore(createDiv, outers);
+
+				// outer.appendChild(createDiv);                     //2 在元素后面添加
+
+				createDiv.innerHTML = ta.value;
+				ta.value = "";
+			};
+
+		};
+
+	</script>
+</body>
+</html>

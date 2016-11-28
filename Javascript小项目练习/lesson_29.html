@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试clientX,clientY,offsetLeft,offsetTop,pageX,pageY</title>
+</head>
+<body>
+	<div id="demo"></div>
+
+	<script>
+		window.onload = function(){
+			document.onmousedown = function(event){
+				var e = event || window.event;
+				var demo = document.getElementById("demo");
+				demo.innerHTML = "clientX: " + e.clientX + "<br>" + "clientY: " + e.clientY + "<br><br>" +
+								"pageX: " + e.pageX + "<br>" + "pageY: " + e.pageY + "<br><br>" + 
+								"offsetWidth: " + demo.offsetWidth + "<br>" + "offsetHeight: " + demo.offsetHeight + "<br><br>" + 
+								"offsetTop: " + demo.offsetTop + "<br>" + "offsetLeft: " + demo.offsetLeft;
+			};
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易留言板 v1.0</title>
+	<style>
+		.write{
+			width: 300px;
+			margin-bottom: 20px;
+		}
+		#wLists{
+			width: 500px;
+			border: 1px solid black;
+		}
+		#wLists > p::before{
+			content: "X";
+			position: relative;
+			background: lightgreen;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			float: right;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="write">
+			<textarea name="" id="ta" cols="30" rows="5"></textarea>
+			<input id="fabiao" type="button" value="发表">
+		</div>
+		<div id="wLists">
+			<div>Lorem ipsum dolor.</div>
+			<div>Lorem ipsum dolor sit.</div>
+			<div>Lorem ipsum dolor sit amet.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur.</div>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function(){
+			var fabiao = document.getElementById("fabiao");
+			fabiao.onclick = function(){
+				var writes = document.getElementById("ta");     //获取要发表的内容
+				var write = document.getElementById("wLists");  //获取要插入的元素的位置
+				var newElement = document.createElement("div");   //创建一个新元素p
+				write.appendChild(newElement);                  //插入新元素到指定位置
+				newElement.innerHTML = writes.value;            //给新元素添加内容
+				writes.value = "";                              //发表后清空输入框中的内容
+			};
+		};
+	</script>
+</body>
+</html>
