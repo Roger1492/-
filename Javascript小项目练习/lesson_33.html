@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mac Docker效果</title>
+	<style>
+		.wrap{
+			width: 1000px;
+			height: 150px;
+			border: 1px solid black;
+			position: relative;
+		}
+		.wrap > div{
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			bottom: -70px;
+			left: 50px;
+		}
+		.wrap > div > img{
+			width: 64px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div><img class="oImg" src="lesson_33/app-store.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/Avast_Antivirus_128px_1179955_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/AVG_128px_1179956_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/car_148.46846846847px_1204515_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/happy-mac-logo.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/iPad_128px_1123223_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/iTunes_Red_music_128px_1108423_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/MacBook_Air_128px_1119033_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/Mac_Dictionary_128px_1180089_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/open_book_156.90861618799px_1206034_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/Pink_iPhone_5C_128px_1129215_easyicon.net.png" alt=""></div>
+		<div><img class="oImg" src="lesson_33/tree_green_146.17283950617px_1168033_easyicon.net.png" alt=""></div>
+	</div>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script>
+		var oImg = document.getElementsByClassName("oImg");
+
+		for(var i = 0; i <= oImg.length; i++){
+			oImg[i].onmouseover = function(){
+				this.style.transform = "scale(1.8, 1.8)";
+				this.style.transformOrigin = "50% 100%";
+				this.previousSibling.style.transform = "scale(1.5, 1.5)";
+
+
+			};
+			oImg[i].onmouseout = function(){
+				this.style.transform = "scale(1, 1)";
+			};
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery attr()的回调函数</title>
+</head>
+<body>
+	<a href="http://www.runoob.com">Runoob</a>
+	<button>click</button>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("a").attr('href', function(i, oldValue){
+					return oldValue + "/jquery";
+				});
+			});
+		});
+	</script>
+</body>
+</html>

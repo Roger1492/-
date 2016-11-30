@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery 添加元素</title>
+	<style>
+		div{
+			width: 300px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<textarea name="" id="texts" cols="30" rows="10"></textarea>
+	<button>添加</button>
+
+	<div>
+		<nav>11111111</nav>
+		<nav>22222222222</nav>
+		<nav>33333333333333333</nav>
+	</div>
+
+	<script src="H:/CDN/jquery-3.1.0.js"></script>
+	<script>
+		var texts = document.getElementById("texts");
+		var oNav = document.getElementsByTagName("nav");
+
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("div").append("<nav>"+texts.value+"</nav>");    //添加到后面
+				// $("div").prepend("<nav>"+texts.value+"</nav>");   //添加到前面
+				texts.value = null;
+
+			});
+		});
+	</script>
+</body>
+</html>
