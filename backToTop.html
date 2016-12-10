@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>返回顶部按钮</title>
+	<style>
+		.con{
+			width: 100px;
+			height: 7000px;
+			background: lightgray;
+		}
+		button{
+			position: fixed;
+			right: 20px;
+			bottom: 20px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="con"></div>
+
+	<button>Btn</button>
+
+	<script>
+		window.onload = function(){
+			var btn = document.getElementsByTagName("button")[0];
+			var ch = document.documentElement.clientHeight;
+			var timer = null;
+			var isTop = true;
+			
+			window.onscroll = function(){
+				var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+				if(osTop >= ch){
+					btn.style.display = "inline-block";
+				} else{
+					btn.style.display = "none";
+				}
+				if(!isTop){
+					clearInterval(timer);
+				}
+				isTop = false;
+			};
+
+			btn.onclick = function(){
+			var timer = setInterval(function(){
+				var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var isSpeed = Math.floor(osTop / 5);	
+				document.documentElement.scrollTop = document.body.scrollTop = osTop - isSpeed;
+				isTop = false;
+				if(osTop == 0){
+					clearInterval(timer);
+				}
+			}, 20);
+			}
+		};
+	</script>
+</body>
+</html>
