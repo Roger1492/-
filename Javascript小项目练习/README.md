@@ -1,4 +1,5 @@
 ##Dictory
+0. wechat.html ---- 模仿微信聊天
 1. 点击文本后在input中输出点击的内容
 2. 点击后改变div元素的颜色
 3. 移动版，Orientation事件
