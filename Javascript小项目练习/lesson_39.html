@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>在页面上面显示进度条的百分比</title>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .line {
+        width: 0%;
+        height: 5px;
+        background: blue;
+        position: fixed;
+        top: 0;
+    }
+    
+    .wrap {
+        width: 100px;
+        height: 5000px;
+        background: lightgrey;
+    }
+    .number{
+    	position: fixed;
+    	left: 100px;
+    	top: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="line"></div>
+    <div class="wrap"></div>
+    <div class="number"></div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+    	$(function() {
+    		$(window).scroll(function(){
+    			var line = document.getElementsByClassName("line")[0];
+    			var number = document.getElementsByClassName("number")[0];
+				var docHeight = $(document).height();
+				var winHeight = $(window).height();
+				var scrollTo = $(window).scrollTop();
+				var perc = scrollTo / (docHeight - winHeight)*100;
+				line.style.width = perc + "%";
+
+				var show = "var docHeight = $(document).height() : " + docHeight + "<br>" + 
+						   "var winHeight = $(window).height() : " + winHeight + "<br>" + 
+						   "var scrollTo = $(window).scrollTop() : " + scrollTo + "<br>" +
+						   "scrollTo / (docHeight - winHeight)*100 = " + 
+						   "Percent : " + perc;
+				number.innerHTML = show;
+    		})
+    	});
+    </script>
+
+<!--     <<script>
+		window.onload = function(){
+			setInterval(run, 5);
+			function run(){
+				var line = document.getElementsByClassName("line")[0];
+				var docHeight = $(document).height();
+				var winHeight = $(window).height();
+				var scrollTo = $(window).scrollTop();
+				var perc = scrollTo / (docHeight - winHeight)*100;
+				line.style.width = perc + "%";
+			}
+		};
+	</script> -->
+
+
+<!--     <script>
+    $(function() {
+        setInterval(run, 1);
+
+        function run() {
+            var line = document.getElementsByClassName("line")[0];
+            var docHeight = $(document).height();
+            var winHeight = $(window).height();
+            var scrollTo = $(window).scrollTop();
+            var perc = scrollTo / (docHeight - winHeight);
+            line.style.width = perc * 100 + "%";
+        }
+    });
+    </script> -->
+</body>
+
+</html>

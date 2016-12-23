@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d-open-door</title>
+	<style>
+		div{
+			position: relative;
+			width: 300px;
+			height: 100px;
+			background: lightgray;
+			-webkit-perspective: 500px;
+			margin: 200px;
+		}
+		nav{
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+		.one{
+			background: red;
+			text-align: center;
+			transform: rotateX(-90deg);
+			transition: all 1s;
+			transform-origin: 50% 0;
+		}
+		.one > a{
+			display: inline-block;
+			text-decoration: none;
+			color: white;
+			font-size: 2em;
+			line-height: 100px;
+		}
+		.one:hover > a{
+			text-decoration: underline;
+		}
+		.two{
+			background: blue;
+			transform: translateY(-100px);
+			transition: all 1s;
+			transform-origin: 50% 100%;
+		}
+		div:hover > .one{
+			transform: rotateX(0deg);
+		}
+		div:hover > .two{
+			transform: translateY(-100px) rotateX(-110deg);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<nav class="one"><a href="#">Zhihu</a></nav>
+		<nav class="two"></nav>
+	</div>
+</body>
+</html>

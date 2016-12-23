@@ -19,14 +19,14 @@
 
 	<script>
 		window.onload = function(){
-			window.onclick = function(event){
+			window.onmousemove = function(event){
 				var container = document.getElementsByClassName("container")[0];
 				var ev = event || window.event;
 				var x = ev.clientX;
 				var y = ev.clientY;
 				container.style.left = x + "px";
 				container.style.top = y + "px";
-
+				// container.style.transition = "all .2s";
 			};
 		};		
 	</script>
