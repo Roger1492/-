@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>电影结尾字幕滚动</title>
+  <style>
+    div{
+      margin: 50px auto;
+      width: 800px;
+      height: 600px;
+      border: 1px solid black;
+      background: black;
+    }
+    marquee{
+      width: 800px;
+      height: 600px;
+      color: white;
+      display: flex;
+      justify-content: center;
+    }
+    tr{
+      line-height: 30px;
+    }
+    td:nth-of-type(odd){
+      float: right;
+      transform: translateX(-10px);
+    }
+    td:nth-of-type(even){
+      transform: translateX(10px);
+    }
+  </style>
+</head>
+<body>
+
+    <div>
+      <marquee behavior="scroll" direction="up" loop="-1">
+        <table>
+          <tr>
+            <td>James Black</td>
+            <td>Hovard James</td>
+          </tr>
+          <tr>
+            <td>Cassidy Foster</td>
+            <td>Maria Sharapova</td>
+          </tr>
+          <tr>
+            <td>Roger Shen</td>
+            <td>Shen Chaomin</td>
+          </tr>
+          <tr>
+            <td>Ronald Donald</td>
+            <td>Nonovan Ricky</td>
+          </tr>
+          <tr>
+            <td>Donovan Ricky</td>
+            <td>James Black</td>
+          </tr>
+          <tr>
+            <td>Dude in pool</td>
+            <td>Judy Stealth</td>
+          </tr>
+          <tr>
+            <td>Girl in Bathroom</td>
+            <td>Den Grossy</td>
+          </tr>
+          <tr>
+            <td>Hovard James</td>
+            <td>Ronald Nonald</td>
+          </tr>
+          <tr>
+            <td>Active Control</td>
+            <td>Tim Lover</td>
+          </tr>
+          <tr>
+            <td>Table on Floor</td>
+            <td>Black white</td>
+          </tr>
+          <tr>
+            <td>Jasy James</td>
+            <td>Tinny Toon</td>
+          </tr>
+          <tr>
+            <td>Director</td>
+            <td>Trooly Moon</td>
+          </tr>
+          <tr>
+            <td>Sound Design</td>
+            <td>Kristina Miles</td>
+          </tr>
+          <tr>
+            <td>Sound Editor</td>
+            <td>Frank Green</td>
+          </tr>
+          <tr>
+            <td>Consultants</td>
+            <td>Any man</td>
+          </tr>
+        </table>
+      </marquee>
+    </div>
+
+</body>
+</html>
