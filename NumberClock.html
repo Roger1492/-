@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body {
+        background: #333;
+    }
+    #year{
+    	width: 400px;
+    	height: 60px;
+    	/* background: #eee; */
+    	color: #eee;
+    	line-height: 60px;
+    	text-align: center;
+    	font-size: 2em;
+    	position: absolute;
+    	z-index: 9;
+    }
+    #wrap {
+        position: relative;
+        width: 600px;
+        height: 200px;
+        background: black;
+        box-shadow: 0 0 0 2px #eee;
+    }
+    
+    #time {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        background: #222;
+        float: left;
+        font-size: 6em;
+        line-height: 250px;
+        text-indent:70px;
+        color: #eee;
+    }
+    
+    #PMAM {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 99;
+        transform: translate(320px, 100px);
+        color: #eee;
+        font-size: 2em;
+        line-height: 80px;
+        text-align: center;
+    }
+    
+    #other {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background: lightgreen;
+    }
+    
+    #week,
+    #seconds {
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+        line-height: 100px;
+        text-align: center;
+    }
+    #week{
+    	font-size: 2em;
+    }
+    #seconds {
+        font-size: 5em;
+        background: lightgreen;
+        color: red;
+        animation: runSconds 1s infinite;
+    }
+    @-webkit-keyframes runSconds {
+    	50% {transform: scale(.9, .9);}
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+    	<div id="year"></div>
+        <div id="time"></div>
+        <div id="PMAM"></div>
+        <div id="other">
+            <div id="week"></div>
+            <div id="seconds"></div>
+        </div>
+    </div>
+    <script>
+    window.onload = function() {
+        setInterval(run, 1000);
+        run();
+
+        function run() {
+        	var year = document.getElementById("year");
+            var time = document.getElementById("time");
+            var week = document.getElementById("week");
+            var seconds = document.getElementById("seconds");
+            var PMAM = document.getElementById("PMAM");
+            var randomN = Math.floor(Math.random()*16777216).toString(16);
+            var date = new Date();
+            var weeks = date.getDay();
+            var hours = date.getHours();
+            var ghours = addZero(date.getHours());
+            var gMinutes = addZero(date.getMinutes());
+            var gseconds = addZero(date.getSeconds());
+            var gyear = date.getFullYear();
+            var gmonth = yearAddOne(date.getMonth());
+            var gday = date.getDate();
+            time.innerHTML = ghours + ':' + gMinutes;
+            seconds.innerHTML = gseconds + 's';
+            year.innerHTML = gyear + '年' + gmonth + '月' + gday +'日';
+            seconds.style.color = '#' + randomN;
+
+            function addZero(n) {
+                if (n < 10)
+                    return '0' + n;
+                return '' + n;
+            }
+
+            function mm(h){
+            	if (h < 12)
+            		return PMAM.innerHTML = 'AM';
+            	return PMAM.innerHTML = 'PM';
+            }
+            mm(hours);
+
+            function yearAddOne(y){
+            	return y + 1;
+            }
+            yearAddOne(gmonth);
+
+            function weekss(w){
+            	switch (w) {
+            		case 1:
+            			week.innerHTML = "Monday";
+            			break;
+            		case 2:
+            			week.innerHTML = "Tuesday";
+            			break;
+            		case 3:
+            			week.innerHTML = "Wednesday";
+            			break;
+            		case 4:
+            			week.innerHTML = "Thrsday";
+            			break;
+            		case 5:
+            			week.innerHTML = "Friday";
+            			break;
+            		case 6:
+            			week.innerHTML = "Saturday";
+            			break;
+            		case 7:
+            			week.innerHTML = "Sunday";
+            			break;
+            		default:
+            			week.innerHTML = "wrong";
+            			break;
+            	}
+            }
+            weekss(weeks);
+        }
+
+    };
+    </script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
