@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Todo List</title>
+    <style>
+      .wrap {
+        position: relative;
+          margin: 0 auto;
+          width: 400px;
+      }
+      
+      .content input[type="text"] {
+          position: relative;
+          top: 1px;
+          height: 34px;
+          width: 323px;
+          outline: none;
+          font-size: 18px;
+          border: 1px solid lightgray;
+      }
+      
+      .content input[type="button"] {
+          position: relative;
+          left: -5px;
+          height: 38px;
+          width: 70px;
+          border: none;
+          cursor: pointer;
+          background: lightgray;
+          outline: none;
+      }
+      
+      ul {
+          list-style-type: none;
+          padding: 0px;
+      }
+      
+      li {
+          width: 400px;
+          height: 40px;
+          line-height: 40px;
+          cursor: pointer;
+      }
+      
+      li:nth-of-type(even) {
+          background: #ECE9E9;
+      }
+      
+      li:nth-of-type(odd) {
+          background: whitesmoke;
+      }
+      
+      li:hover {
+          background: #D3D3D3;
+      }
+      
+      .close {
+          display: inline-block;
+          position: absolute;
+          font-size: 32px;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          left: 360px;
+      }
+      
+      .close:hover {
+          background: red;
+      }
+      
+      ul li.checked {
+          background: blue;
+          color: #fff;
+          text-decoration: line-through;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <p>Please, Add Todo list</p>
+            <input type="text">
+            <input type="button" value="Add">
+        </div>
+        <ul>
+        </ul>
+    </div>
+    <script>
+    // 添加关闭按钮
+    var i;
+    var li = document.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        var span = document.createElement("span");
+        var text = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(text);
+        li[i].appendChild(span);
+    }
+
+    // 给关闭按钮一个click事件
+    var i;
+    var close = document.getElementsByClassName("close");
+    for (i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function() {
+            this.parentElement.style.display = "none";
+        }, false);
+    }
+
+    // 添加新输入的值，追加到最后，并添加click关闭事件。
+    var val = document.getElementsByTagName("input")[0];
+    var add = document.getElementsByTagName("input")[1];
+    var ul = document.getElementsByTagName("ul")[0];
+    add.addEventListener("click", function() {
+        if (val.value == "") {
+            alert("please enter yours todo list");
+        } else {
+            var nli = document.createElement("li");
+            nli.innerHTML = val.value;
+            ul.appendChild(nli);
+            val.value = null;
+
+            var span = document.createElement("span");
+            var text = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(text);
+            nli.appendChild(span);
+
+            span.addEventListener("click", function() {
+                this.parentElement.style.display = "none";
+            }, false);
+        }
+    }, false);
+    // 添加回车确定事件
+    val.addEventListener("keypress", function() {
+        if (window.event.keyCode == 13) {
+            if (val.value == "") {
+                alert("please enter yours todo list");
+            } else {
+                var nli = document.createElement("li");
+                nli.innerHTML = val.value;
+                ul.appendChild(nli);
+                val.value = null;
+
+                var span = document.createElement("span");
+                var text = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(text);
+                nli.appendChild(span);
+
+                span.addEventListener("click", function() {
+                    this.parentElement.style.display = "none";
+                }, false);
+            }
+        }
+    }, false);
+
+    // 添加checked事件
+    var list = document.querySelector("ul");
+    list.addEventListener("click", function(e) {
+        e.target.classList.toggle("checked");
+    }, false);
+    </script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+
+</html>
