@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+    #wrap {
+        position: absolute;
+        width: 600px;
+        height: 350px;
+        overflow: hidden;
+    }
+    
+    #content {
+        position: relative;
+        width: 4200px;
+        height: 350px;
+    }
+    
+    #content > span {
+        display: inline-block;
+        width: 600px;
+        height: 350px;
+        float: left;
+        line-height: 350px;
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+    }
+    
+    #content > span:nth-of-type(1) {
+        background: #AFB93E;
+    }
+    
+    #content > span:nth-of-type(2) {
+        background: #B03B3B;
+    }
+    
+    #content > span:nth-of-type(3) {
+        background: #5656B3;
+    }
+    
+    #content > span:nth-of-type(4) {
+        background: #70B37D;
+    }
+    
+    #content > span:nth-of-type(5) {
+        background: #46AD9B;
+    }
+    
+    #content > span:nth-of-type(6) {
+        background: #AFB93E;
+    }
+    
+    #content > span:nth-of-type(7) {
+        background: #B03B3B;
+    }
+    
+    #btns span {
+        display: inline-block;
+        position: relative;
+        top: -40px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        left: 250px;
+        background: rgba(0, 0, 0, .5);
+        cursor: pointer;
+    }
+    
+    #btns span:hover {
+        background: #fff;
+    }
+    
+    #btns .on {
+        background: #fff;
+    }
+    
+    a {
+        display: none;
+        position: relative;
+        top: -230px;
+        width: 40px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+        background: rgba(0, 0, 0, .5);
+    }
+    
+    a:nth-of-type(2) {
+        left: 515px;
+    }
+    
+    a:hover {
+        background: rgba(0, 0, 0, .8);
+    }
+    
+    #wrap:hover a {
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="content" style="left:-600px;">
+            <span>55555</span>
+            <span>11111</span>
+            <span>22222</span>
+            <span>33333</span>
+            <span>44444</span>
+            <span>55555</span>
+            <span>11111</span>
+        </div>
+        <div id="btns">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="#" id="prev">&lt;</a>
+        <a href="#" id="next">&gt;</a>
+    </div>
+    <script>
+    window.onload = function() {
+        var wrap = document.getElementById("wrap");
+        var content = document.getElementById("content");
+        var btns = document.getElementById("btns").getElementsByTagName("span");
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var index = 1;
+        var animated = false;
+        var timer;
+
+        // 显示切换按钮
+        function showBtns() {
+            for (var i = 0; i < btns.length; i++) {
+                if (btns[i].className == "on") {
+                    btns[i].className = "";
+                    break;
+                }
+            }
+            btns[index - 1].className = "on";
+        }
+
+        // 按钮切换
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function() {
+            		if(animated){
+            			return;
+            		}
+                // 如果点击的是正在显示的，则不做任何操作。
+                if (this.className == "on") {
+                    return;
+                }
+                var myIndex = parseInt(this.getAttribute("index"));
+                var offset = -600 * (myIndex - index);
+                index = myIndex;
+                showBtns();
+                animate(offset);
+            };
+        }
+
+        // 点击箭头切换
+        function animate(offset) {
+
+            // 无限滚动
+            var newLeft = parseInt(content.style.left) + offset;
+            var time = 300; // 总位移时间
+            var interval = 10; //位移间隔
+            var speed = offset / (time / interval);
+            animated = true;
+
+            function run() {
+                if ((speed < 0 && parseInt(content.style.left) > newLeft) || (speed > 0 && parseInt(content.style.left) < newLeft)) {
+                    content.style.left = parseInt(content.style.left) + speed + "px";
+                    setTimeout(run, interval);
+                } else {
+                    content.style.left = newLeft + "px";
+                    if (newLeft > -600) {
+                        content.style.left = -3000 + "px";
+                    }
+                    if (newLeft < -3000) {
+                        content.style.left = -600 + "px";
+                    }
+                    animated = false;
+                }
+            }
+            run();
+        }
+
+        function play() {
+            timer = setInterval(function() {
+                next.onclick();
+            }, 3000)
+        }
+
+        function stop() {
+            clearInterval(timer);
+        }
+
+
+        prev.onclick = function() {
+            if (index == 1) {
+                index = 5;
+            } else {
+                index -= 1;
+            }
+            showBtns();
+            animate(600);
+        };
+        next.onclick = function() {
+            if (index == 5) {
+                index = 1;
+            } else {
+                index += 1;
+            }
+            showBtns();
+            animate(-600);
+        };
+
+        // 鼠标离开轮播图后自动播放，进入轮播图后停止播放。
+        wrap.onmouseover = stop;
+        wrap.onmouseout = play;
+        play();
+
+    };
+    </script>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
