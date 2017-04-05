@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+    .wrap {
+        position: absolute;
+        width: 600px;
+        height: 350px;
+        overflow: hidden;
+    }
+    
+    .list {
+        position: relative;
+        width: 6000px;
+        height: 350px;
+    }
+    
+    .slider {
+        position: relative;
+        display: inline-block;
+        width: 600px;
+        height: 350px;
+        line-height: 350px;
+        text-align: center;
+        font-size: 100px;
+        color: #fff;
+        float: left;
+    }
+    
+    .slider:nth-of-type(1) {
+        background: red;
+    }
+    
+    .slider:nth-of-type(2) {
+        background: green;
+    }
+    
+    .slider:nth-of-type(3) {
+        background: blue;
+    }
+    
+    .slider:nth-of-type(4) {
+        background: cyan;
+    }
+    
+    .slider:nth-of-type(5) {
+        background: orange;
+    }
+    
+    .slider:nth-of-type(6) {
+        background: purple;
+    }
+    
+    .slider:nth-of-type(7) {
+        background: gray;
+    }
+    
+    .slider:nth-of-type(8) {
+        background: lightgreen;
+    }
+    
+    .slider:nth-of-type(9) {
+        background: red;
+    }
+    
+    .slider:nth-of-type(10) {
+        background: green;
+    }
+    
+    .btns span {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: rgba(0, 0, 0, .4);
+        border-radius: 50%;
+        top: -50px;
+        left: 200px;
+        cursor: pointer;
+    }
+    
+    .btns .on {
+        background: #fff;
+    }
+    
+    .btns span:hover {
+        background: #fff;
+    }
+    
+    .pn a {
+        position: relative;
+        top: -230px;
+        display: inline-block;
+        width: 35px;
+        height: 60px;
+        background: rgba(0, 0, 0, .4);
+        text-align: center;
+        text-decoration: none;
+        line-height: 60px;
+        color: #fff;
+        font-size: 30px;
+    }
+    
+    .pn a:nth-of-type(2) {
+        float: right;
+    }
+    
+    .pn a:hover {
+        background: rgba(0, 0, 0, .6);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="list" style="left: -600px">
+            <span class="slider">888</span>
+            <span class="slider">111</span>
+            <span class="slider">222</span>
+            <span class="slider">333</span>
+            <span class="slider">444</span>
+            <span class="slider">555</span>
+            <span class="slider">666</span>
+            <span class="slider">777</span>
+            <span class="slider">888</span>
+            <span class="slider">111</span>
+        </div>
+        <div class="btns">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+            <span index="6"></span>
+            <span index="7"></span>
+            <span index="8"></span>
+        </div>
+        <div class="pn">
+            <a href="#" class="prev">&lt;</a>
+            <a href="#" class="next">&gt;</a>
+        </div>
+    </div>
+    <script>
+    window.onload = function() {
+        var wrap = document.getElementsByClassName("wrap")[0];
+        var list = document.getElementsByClassName("list")[0];
+        var btns = document.getElementsByClassName("btns")[0].getElementsByTagName("span");
+        var prev = document.getElementsByClassName("prev")[0];
+        var next = document.getElementsByClassName("next")[0];
+        var timer;
+        var index = 1;
+
+
+        function showBtn() {
+            for (var i = 0; i < btns.length; i++) {
+                if (btns[i].className == "on") {
+                    btns[i].className = "";
+                }
+            }
+            btns[index - 1].className = "on";
+        }
+
+        for (var i = 0; i < btns.length; i++) {
+            (function(i) {
+                btns[i].onclick = function() {
+                    var clickIndex = parseInt(this.getAttribute("index"));
+                    var offset = 600 * (index - clickIndex);
+                    animation(offset);
+                    index = clickIndex;
+                    showBtn();
+                };
+            })(i);
+        }
+
+        function play() {
+            timer = setInterval(function() {
+                next.onclick();
+            }, 2000);
+        }
+
+        function stop() {
+            clearInterval(timer);
+        }
+        play();
+
+        function animation(offset) {
+            var newLeft = parseInt(list.style.left) + offset;
+
+            var time = 300;
+            var interval = 10;
+            var speed = offset / (time / interval);
+
+            function run() {
+                if ((speed < 0 && parseInt(list.style.left) > newLeft) || (speed > 0 && parseInt(list.style.left) < newLeft)) {
+                    list.style.left = parseInt(list.style.left) + speed + "px";
+                    setTimeout(run, interval);
+                } else {
+                    list.style.left = newLeft + "px";
+
+                    if (newLeft > -600) {
+                        list.style.left = -4800 + "px";
+                    }
+                    if (newLeft < -4800) {
+                        list.style.left = -600 + "px";
+                    }
+                }
+            }
+            run();
+
+        }
+
+        prev.onclick = function() {
+            index -= 1;
+            if (index < 1) {
+                index = 8;
+            }
+            showBtn();
+            animation(600);
+        };
+        next.onclick = function() {
+            index += 1;
+            if (index > 8) {
+                index = 1;
+            }
+            showBtn();
+            animation(-600);
+        };
+
+        wrap.onmouseover = stop;
+        wrap.onmouseout = play;
+    };
+    </script>
+</body>
+
+</html>
