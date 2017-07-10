@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rich Text Eidtor</title>
+	<link rel="stylesheet" href="F:/Code/CDN/Font-Awesome-master/css/font-awesome.css">
+	<link rel="stylesheet" href="F:/Code/CDN/bgrins-spectrum/spectrum.css">
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		.wrap{
+			margin: 20px auto;
+			width: 1000px;
+			height: 520px;
+			background: lightgray;
+			border-radius: 5px;
+			border: 1px solid lightgray;
+		}
+		.tools{
+			width: 100%;
+			height: 40px;
+			border-radius: 5px 5px 0 0;
+			border-bottom: 5px solid lightgray;
+		}
+		.tools button{
+			border: none;
+			width: 40px;
+			height: 40px;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+		}
+		.tools button:hover{
+			background: #fff;
+		}
+		.tools button i{
+			height: 40px;
+			height: 40px;
+			display: inline-block;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 5px;
+		}
+		.tools select{
+			height: 40px;
+			border-radius: 5px;
+			font-size: 20px;
+			outline: none;
+		}
+		.tools select option{
+			font-size: 20px;
+		}
+		.editor{
+			width: 990px;
+			height: 470px;
+			overflow: auto;
+			background: #fff;
+			outline: none;
+			padding: 5px;
+		}
+		.editor ul{
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="tools">
+			<button data-role="undo"><i class="fa fa-undo"></i></button>
+			<button data-role="redo"><i class="fa fa-repeat"></i></button>
+			<button data-role="bold"><i class="fa fa-bold"></i></button>
+			<button data-role="italic"><i class="fa fa-italic"></i></button>
+			<button data-role="underline"><i class="fa fa-underline"></i></button>
+			<button data-role="strikeThrough"><i class="fa fa-strikethrough"></i></button>
+			<select name="fonts" id="fonts">
+				<option value="Arial">Arial</option>
+				<option value="Georgia">Georgia</option>
+				<option value="Tahoma">Tahoma</option>
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="Verdana">Verdana</option>
+				<option value="Impact">Impact</option>
+				<option value="Curier New">Curier New</option>
+			</select>
+			<select name="fontsize" id="fontsize">
+				<option value="8">8</option>
+				<option value="10">10</option>
+				<option value="12">12</option>
+				<option value="14">14</option>
+				<option value="16" selected>16</option>
+				<option value="18">18</option>
+				<option value="20">20</option>
+				<option value="22">22</option>
+				<option value="24">24</option>
+				<option value="26">26</option>
+			</select>
+			<button data-role="justifyLeft"><i class="fa fa-align-left"></i></button>
+			<button data-role="justifyCenter"><i class="fa fa-align-center"></i></button>
+			<button data-role="justifyRight"><i class="fa fa-align-right"></i></button>
+			<button data-role="justifyFull"><i class="fa fa-align-justify"></i></button>
+			<button data-role="insertUnorderedList"><i class="fa fa-list-ul"></i></button>
+			<button data-role="insertOrderedList"><i class="fa fa-list-ol"></i></button>
+			<button data-role="subscript"><i class="fa fa-subscript"></i></button>
+			<button data-role="superscript"><i class="fa fa-superscript"></i></button>
+			<!-- <button data-role="insertImage"><i class="fa fa-file-image-o"></i></button> -->
+			<input type="text" class="colorPicker">
+		</div>
+		<div class="editor" contenteditable>
+			
+		</div>
+	</div>
+
+	<script src="F:/Code/CDN/jquery-3.2.1.js"></script>
+	<script src="F:/Code/CDN/bgrins-spectrum/spectrum.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+		$(document).ready(function() {
+
+			$("button").click(function(){
+				document.execCommand($(this).data("role"),false);
+			});
+
+			$(".colorPicker").spectrum({
+    	color: "#f00",
+    	showInput: true,
+    	showAlpha: true,
+    	allowEmpty: true,
+    	showPalette: true,
+    	palette: [
+    		["#000","#444","#666","#999","#ccc","#eee","#f3f3f3","#fff"],
+        ["#f00","#f90","#ff0","#0f0","#0ff","#00f","#90f","#f0f"],
+        ["#f4cccc","#fce5cd","#fff2cc","#d9ead3","#d0e0e3","#cfe2f3","#d9d2e9","#ead1dc"],
+        ["#ea9999","#f9cb9c","#ffe599","#b6d7a8","#a2c4c9","#9fc5e8","#b4a7d6","#d5a6bd"],
+        ["#e06666","#f6b26b","#ffd966","#93c47d","#76a5af","#6fa8dc","#8e7cc3","#c27ba0"],
+        ["#c00","#e69138","#f1c232","#6aa84f","#45818e","#3d85c6","#674ea7","#a64d79"],
+        ["#900","#b45f06","#bf9000","#38761d","#134f5c","#0b5394","#351c75","#741b47"],
+        ["#600","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
+    	],
+    	change: function(color){
+    		color = color.toHexString();
+    		document.execCommand("foreColor",false,color);
+    	}
+		});
+
+			$("#fonts").on("change",function(){
+				var font = $(this).val();
+				document.execCommand("fontName",false,font);
+			});
+
+			$("#fontsize").on("change",function(){
+				var size = $(this).val();
+				$(".editor").css("fontSize", size + "px");
+			})
+
+		});
+	</script>
+</body>
+</html>
