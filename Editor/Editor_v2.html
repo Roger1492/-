@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rich Text Editor v2.0</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg">
+  <link rel="stylesheet" href="F:/Code/CDN/bgrins-spectrum/spectrum.css">
+  <style>
+    .tools > button{
+      padding: 2px 7px;
+      cursor: pointer;
+    }
+    .editor{
+      position: relative;
+      margin-top: 10px;
+      width: 90vw;
+      height: 80vh;
+      border: 1px solid lightgray;
+      outline: none;
+      border-radius: 5px;
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="tools">
+      <button data-role="undo"><i class="fa fa-rotate-left"></i></button>
+      <button data-role="redo"><i class="fa fa-rotate-right"></i></button>
+      <button data-role="bold"><i class="fa fa-bold"></i></button>
+      <button data-role="underline"><i class="fa fa-underline"></i></button>
+      <button data-role="strikeThrough"><i class="fa fa-strikethrough"></i></button>
+      <button data-role="italic"><i class="fa fa-italic"></i></button>
+      <button data-role="copy"><i class="fa fa-copy"></i></button>
+      <!-- <button data-role="paste"><i class="fa fa-paste"></i></button> -->
+      <button data-role="cut"><i class="fa fa-cut"></i></button>
+      <button data-role="createLink"><i class="fa fa-link"></i></button>
+      <button data-role="unlink"><i class="fa fa-unlink"></i></button>
+      <button data-role="insertImage"><i class="fa fa-image"></i></button>
+      <button data-role="delete"><i class="fa fa-long-arrow-left"></i></button>
+      <select name="fontName" id="fontName">
+        <option value="Arial">Arial</option>
+        <option value="Consolas">Consolas</option>
+        <option value="Curier New">Curier New</option>
+        <option value="Magneto Bold">Magneto Bold</option>
+        <option value="Microsoft YaHei">Microsoft YaHei</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Lucida Sans">Lucida Sans</option>
+        <option value="Felix Titling Regular">Felix Titling Regular</option>
+        <option value="Algerian Regular">Algerian Regular</option>
+      </select>
+      <select name="fontSize" id="fontSize">
+        <option value="14">14</option>
+        <option value="16" selected>16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
+        <option value="22">22</option>
+        <option value="24">24</option>
+        <option value="28">28</option>
+        <option value="30">30</option>
+        <option value="36">36</option>
+        <option value="40">40</option>
+      </select>
+      <input type="text" id="foreColor">
+      <select name="header" id="header">
+        <option value="H1">H1</option>
+        <option value="H2">H2</option>
+        <option value="H3">H3</option>
+        <option value="H4">H4</option>
+        <option value="H5">H5</option>
+        <option value="H6">H6</option>
+      </select>
+      <button data-role="indent"><i class="fa fa-indent"></i></button>
+      <button data-role="insertUnorderedList"><i class="fa fa-list-ul"></i></button>
+      <button data-role="insertOrderedList"><i class="fa fa-list-ol"></i></button>
+      <button data-role="justifyFull"><i class="fa fa-align-justify"></i></button>
+      <button data-role="justifyRight"><i class="fa fa-align-right"></i></button>
+      <button data-role="justifyCenter"><i class="fa fa-align-center"></i></button>
+      <button data-role="justifyLeft"><i class="fa fa-align-left"></i></button>
+      <button data-role="subscript"><i class="fa fa-subscript"></i></button>
+      <button data-role="superscript"><i class="fa fa-superscript"></i></button>
+      <!-- <button>Toggle Editable</button> -->
+    </div>
+    <div class="editor" contenteditable>
+      
+    </div>
+  </div>
+  <script src="F:/Code/CDN/jquery-3.2.1.js"></script>
+  <script src="F:/Code/CDN/bgrins-spectrum/spectrum.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $("button").on("click", function(){
+        document.execCommand($(this).data("role"), false);
+      })
+      
+      // 改变字体颜色
+      $("#foreColor").spectrum({
+      color: "#f00",
+      showInput: true,
+      showAlpha: true,
+      allowEmpty: true,
+      showPalette: true,
+      palette: [
+        ["#000","#444","#666","#999","#ccc","#eee","#f3f3f3","#fff"],
+        ["#f00","#f90","#ff0","#0f0","#0ff","#00f","#90f","#f0f"],
+        ["#f4cccc","#fce5cd","#fff2cc","#d9ead3","#d0e0e3","#cfe2f3","#d9d2e9","#ead1dc"],
+        ["#ea9999","#f9cb9c","#ffe599","#b6d7a8","#a2c4c9","#9fc5e8","#b4a7d6","#d5a6bd"],
+        ["#e06666","#f6b26b","#ffd966","#93c47d","#76a5af","#6fa8dc","#8e7cc3","#c27ba0"],
+        ["#c00","#e69138","#f1c232","#6aa84f","#45818e","#3d85c6","#674ea7","#a64d79"],
+        ["#900","#b45f06","#bf9000","#38761d","#134f5c","#0b5394","#351c75","#741b47"],
+        ["#600","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
+      ],
+      change: function(color){
+        color = color.toHexString();
+        document.execCommand("foreColor",false,color);
+      }
+    });
+
+      // 改变字体样式和大小
+      $("#fontName").on("change",function(){
+        let fontname = $(this).val();
+        document.execCommand("fontName",false,fontname);
+      })
+      $("#fontSize").on("change",function(){
+        let fontsize = $(this).val();
+        $(".editor").css("fontSize", fontsize + "px");
+      })
+
+      $("#header").on("change",function(){
+        let head = $(this).val();
+        document.execCommand("header",false,head);
+      })
+
+    });
+  </script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
