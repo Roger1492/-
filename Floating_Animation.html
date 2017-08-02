@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Floating Animation</title>
+  <style>
+    .wrap{
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.center{
+  position: absolute;
+  margin: 180px;
+  width: 50px;
+  height: 50px;
+  line-height: 43px;
+  background: orange;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 1px gray;
+}
+.sub{
+  position: absolute;
+  left: 185px;
+  top: 185px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: gray;
+  border-radius: 50%;
+  z-index: -1;
+  cursor: pointer;
+  color: #fff;
+  transition: transform .3s ease-in;
+}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="center">-</section>
+  <section class="sub left">L</section>
+  <section class="sub right">R</section>
+  <section class="sub top">T</section>
+  <section class="sub bottom">B</section>
+  <section class="sub lefttop">LT</section>
+  <section class="sub righttop">RB</section>
+  <section class="sub leftbottom">LB</section>
+  <section class="sub rightbottom">RT</section>
+</div>
+<script>
+  let center = document.getElementsByClassName("center")[0];
+let left = document.getElementsByClassName("left")[0];
+let right = document.getElementsByClassName("right")[0];
+let top = document.getElementsByClassName("top")[0];
+let bottom = document.getElementsByClassName("bottom")[0];
+let lefttop = document.getElementsByClassName("lefttop")[0];
+let righttop = document.getElementsByClassName("righttop")[0];
+let leftbottom = document.getElementsByClassName("leftbottom")[0];
+let rightbottom = document.getElementsByClassName("rightbottom")[0];
+let subs = document.getElementsByClassName("sub");
+
+center.addEventListener("click",function(){
+  
+  if(this.innerHTML == "-"){
+    this.innerHTML = "+";
+    left.style.transform = "translateX(-100px)";
+    right.style.transform = "translateX(100px)";
+    top.style.transform = "translateY(-100px)";
+    bottom.style.transform = "translateY(100px)";
+    lefttop.style.transform = "translate(-71px,-71px)";
+    righttop.style.transform = "translate(71px,71px)";
+    leftbottom.style.transform = "translate(-71px,71px)";
+    rightbottom.style.transform = "translate(71px,-71px)";
+    
+    for(let i = 0; i < subs.length; i++){
+      subs[i].style.background = "#" + Math.floor(Math.random()*(1<<24)).toString(16);
+    }
+    
+  } else {
+    this.innerHTML = "-";
+    left.style.transform = "translateX(0px)";
+    right.style.transform = "translateX(0px)";
+    top.style.transform = "translateY(0px)";
+    bottom.style.transform = "translateY(0px)";
+    lefttop.style.transform = "translate(0px,0px)";
+    righttop.style.transform = "translate(0px,0px)";
+    leftbottom.style.transform = "translate(0px,0px)";
+    rightbottom.style.transform = "translate(0px,0px)";
+  }
+  
+},false);
+</script>
+</body>
+</html>
