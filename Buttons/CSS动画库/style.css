@@ -1,0 +1,416 @@
+body{
+  background: #333;
+}
+.btn{
+  display: inline-block;
+  margin: 20px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  background: #2196f3;
+  text-align: center;
+  color: #fff;
+  min-width: 120px;
+  cursor: pointer;
+  transition: all .4s;
+}
+.btn2{
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+.btn2 > span:nth-of-type(1){
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  z-index: 10;
+  transition: all .4s;
+  z-index: -1;
+}
+.btn2 > span:nth-of-type(2){
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  transition: all .4s;
+  z-index: -1;
+}
+.btn3{
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 2px solid #2196f3;
+  text-align: center;
+  color: #2196f3;
+  min-width: 120px;
+  cursor: pointer;
+  transition: all .4s;
+  overflow: hidden;
+}
+
+.big:hover{
+  transform: scale(1.2, 1.2);
+}
+.small:hover{
+  transform: scale(0.8, 0.8);
+}
+
+.skew-left:hover{
+  transform: skew(20deg);
+}
+.skew-right:hover{
+  transform: skew(-20deg);
+}
+.skew-top-left:hover{
+  transform: skew(20deg);
+  transform-origin: 0 0;
+}
+.skew-top-right:hover{
+  transform: skew(-20deg);
+  transform-origin: 0 0;
+}
+.skew-bottom-left:hover{
+  transform: skew(20deg);
+  transform-origin: 0 100%;
+}
+.skew-bottom-right:hover{
+  transform: skew(-20deg);
+  transform-origin: 0 100%;
+}
+
+.rotate-l10:hover{
+  transform: rotate(10deg);
+}
+.rotate-r10:hover{
+  transform: rotate(-10deg);
+}
+.rotate-l30:hover {
+  transform: rotate(30deg);
+}
+.rotate-r30:hover {
+  transform: rotate(-30deg);
+}
+.rotate-l45:hover {
+  transform: rotate(45deg);
+}
+.rotate-r45:hover {
+  transform: rotate(-45deg);
+}
+
+.move-up:hover{
+  transform: translateY(-20px);
+}
+.move-bottom:hover {
+  transform: translateY(20px);
+}
+.move-left:hover{
+  transform: translateX(-20px);
+}
+.move-right:hover{
+  transform: translateX(20px);
+}
+
+.border-in:hover{
+  box-shadow: inset 0 0 0 4px red;
+}
+.border-out:hover{
+  box-shadow: 0 0 0 4px red;
+}
+
+.opacity-in:hover{
+  opacity: .6;
+}
+.opacity-out{
+  opacity: .6;
+}
+.opacity-out:hover{
+  opacity: 1;
+}
+
+.radius-in:hover{
+  border-radius: 15px;
+}
+.radius-out{
+  border-radius: 15px;
+}
+.radius-out:hover{
+  border-radius: 0;
+}
+
+.wobble-top-left,
+.wobble-top-right{
+  transform-origin: 50% 0;
+}
+.wobble-center-left,
+.wobble-center-right{
+  transform-origin: 50% 50%;
+}
+.wobble-bottom-left,
+.wobble-bottom-right{
+  transform-origin: 50% 100%;
+}
+.wobble-top-left:hover{
+  transform: skew(-20deg);
+}
+.wobble-top-right:hover{
+  transform: skew(20deg);
+}
+.wobble-center-left:hover{
+  transform: skew(20deg);
+}
+.wobble-center-right:hover{
+  transform: skew(-20deg);
+}
+.wobble-bottom-left:hover{
+  transform: skew(20deg);
+}
+.wobble-bottom-right:hover{
+  transform: skew(-20deg);
+}
+
+.fade-center-left > span,
+.fade-center-up > span,
+.fade-center > span,
+.fade-top > span,
+.fade-bottom > span,
+.fade-left > span,
+.fade-right > span,
+.fade-top-to-center > span,
+.fade-left-to-center > span,
+.fade-skew-left > span,
+.fade-skew-right > span{
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  z-index: -1;
+  transition: all .4s;
+}
+.fade-center-left > span{
+  transform: scaleX(0);
+}
+.fade-center-up > span{
+  transform: scaleY(0);
+}
+.fade-center > span{
+  transform: scale(0);
+}
+.fade-top > span{
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+}
+.fade-bottom > span{
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+}
+.fade-left > span{
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+.fade-right > span{
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+}
+.fade-skew-left > span{
+  width: 220px;
+  left: -10px;
+  transform: skew(20deg) scaleX(0);
+  transform-origin: 0 50%;
+}
+.fade-skew-right > span{
+  width: 220px;
+  left: -10px;
+  transform: skew(-20deg) scaleX(0);
+  transform-origin: 100% 50%;
+}
+.fade-center-left:hover,
+.fade-center-up:hover,
+.fade-center:hover,
+.fade-top:hover,
+.fade-bottom:hover,
+.fade-left:hover,
+.fade-right:hover,
+.fade-top-to-center:hover,
+.fade-left-to-center:hover,
+.fade-skew-left:hover,
+.fade-skew-right:hover{
+  color: #fff;
+}
+.fade-center:hover > span{
+  transform: scale(1);
+}
+.fade-center-left:hover > span,
+.fade-left:hover > span,
+.fade-right:hover > span{
+  transform: scaleX(1);
+}
+.fade-center-up:hover > span,
+.fade-top:hover > span,
+.fade-bottom:hover > span{
+  transform: scaleY(1);
+}
+.fade-top-to-center span:nth-of-type(1){
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+}
+.fade-top-to-center span:nth-of-type(2){
+  transform-origin: 50% 100%;
+  transform: scaleY(0);
+}
+.fade-left-to-center span:nth-of-type(1){
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+.fade-left-to-center span:nth-of-type(2){
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+}
+.fade-top-to-center:hover span:nth-of-type(1){
+  transform: scaleY(.5);
+}
+.fade-top-to-center:hover span:nth-of-type(2){
+  transform: scaleY(.5);
+}
+.fade-left-to-center:hover span:nth-of-type(1){
+  transform: scaleX(.5);
+}
+.fade-left-to-center:hover span:nth-of-type(2){
+  transform: scaleX(.5);
+}
+
+.fade-skew-left:hover > span{
+  transform: skew(20deg) scaleX(1);
+}
+.fade-skew-right:hover > span{
+  transform: skew(-20deg) scaleX(1);
+}
+
+.underline-top-left > span,
+.underline-top-right > span,
+.underline-bottom-left > span,
+.underline-bottom-right > span,
+.underline-center-top > span,
+.underline-center-bottom > span,
+.underline-top-center > span,
+.underline-bottom-center > span{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 5px;
+  background: #2196f3;
+  transform: scaleX(0);
+  transition: all .4s;
+}
+.underline-top-left > span{
+  transform-origin: 0 0;
+}
+.underline-top-right > span{
+  transform-origin: 100% 0;
+}
+.underline-bottom-left > span{
+  top: 45px;
+  transform-origin: 0 100%;
+}
+.underline-bottom-right > span{
+  top: 45px;
+  transform-origin: 100% 100%;
+}
+.underline-center-top > span{
+  transform-origin: 50% 0;
+}
+.underline-center-bottom > span{
+  top: 45px;
+  transform-origin: 50% 100%;
+}
+.underline-top-center > span:nth-of-type(1){
+  transform-origin: 0 0;
+}
+.underline-top-center span:nth-of-type(2){
+  transform-origin: 100% 0;
+}
+.underline-bottom-center span:nth-of-type(1){
+  top: 45px;
+  transform-origin: 0 100%;
+}
+.underline-bottom-center span:nth-of-type(2){
+  top: 45px;
+  transform-origin: 100% 100%;
+}
+.underline-top-center:hover > span{
+  transform: scaleX(.5);
+}
+.underline-bottom-center:hover > span{
+  transform: scaleX(.5);
+}
+.underline-top-left:hover > span,
+.underline-top-right:hover > span,
+.underline-bottom-left:hover > span,
+.underline-bottom-right:hover > span,
+.underline-center-top:hover > span,
+.underline-center-bottom:hover > span{
+  transform: scaleX(1);
+}
+
+.arrow-l > span:nth-of-type(1),
+.move-arrow-l > span:nth-of-type(1){
+  top: 15px;
+  left: -10px;
+  border-color: transparent #2196f3 transparent transparent;
+}
+.arrow-t > span:nth-of-type(1),
+.move-arrow-b > span:nth-of-type(1){
+  top: -10px;
+  left: 45%;
+  border-color: transparent transparent #2196f3 transparent;
+}
+.arrow-r > span:nth-of-type(1),
+.move-arrow-r > span:nth-of-type(1){
+  left: 95%;
+  top: 15px;
+  border-color: transparent transparent transparent #2196f3;
+}
+.arrow-b > span:nth-of-type(1),
+.move-arrow-t > span:nth-of-type(1){
+  left: 45%;
+  top: 40px;
+  border-color: #2196f3 transparent transparent transparent;
+}
+.arrow-l:hover > span:nth-of-type(1){
+  transform: translateX(-10px);
+}
+.arrow-t:hover > span:nth-of-type(1){
+  transform: translateY(-10px);
+}
+.arrow-r:hover > span:nth-of-type(1){
+  transform: translateX(10px);
+}
+.arrow-b:hover > span:nth-of-type(1){
+  transform: translateY(10px);
+}
+.move-arrow-l:hover > span:nth-of-type(2) {
+  transform: translateX(10px);
+}
+.move-arrow-b:hover > span:nth-of-type(2) {
+  transform: translateY(10px);
+}
+.move-arrow-r:hover > span:nth-of-type(2) {
+  transform: translateX(-10px);
+}
+.move-arrow-t:hover > span:nth-of-type(2) {
+  transform: translateY(-10px);
+}
